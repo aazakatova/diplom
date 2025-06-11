@@ -1,0 +1,112 @@
+﻿<Window x:Class="Avtoservis.SelectServicesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Avtoservis"
+        mc:Ignorable="d"
+        Title="Выбор услуг" Height="640" Width="1050" MinHeight="640" MinWidth="1050"
+        WindowStartupLocation="CenterScreen"
+        FontFamily="Century Gothic" FontSize="16" PreviewMouseDown="Window_PreviewMouseDown">
+    <Grid Background="#FF282B38">
+        <Border Background="White" CornerRadius="15" Margin="20">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="360*"/>
+                    <RowDefinition Height="75*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Заголовок -->
+                <TextBlock Text="Услуги" FontSize="24" FontWeight="Bold" 
+                           Margin="30,20,20,10" Grid.Row="0" Foreground="#FF567BFF"/>
+
+                <!-- Поиск -->
+                <TextBox x:Name="SearchTextBox" Grid.Row="1" Style="{StaticResource SearchTextBoxStyle}" MouseUp="ServicesList_MouseUp"
+                         Text="Поиск..." Margin="20,10,20,10" Width="300" HorizontalAlignment="Left" VerticalAlignment="Center"
+                         GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" TextChanged="SearchTextBox_TextChanged"/>
+
+                <!-- Список услуг -->
+                <ListView x:Name="ServicesList" Grid.Row="2" Margin="20,10,20,0" 
+                          Style="{StaticResource WorksListViewStyle}" 
+                          HorizontalContentAlignment="Stretch"
+                          SelectionMode="Single" 
+                          ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                          Height="350"
+                          SizeChanged="ServicesList_SizeChanged">
+                    <ListView.View>
+                        <GridView>
+                            <!-- Выбрать -->
+                            <GridViewColumn Header="Выбрать" Width="Auto">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <CheckBox IsChecked="{Binding IsSelected}" HorizontalAlignment="Center"
+                                                  VerticalAlignment="Center"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <!-- Услуга -->
+                            <GridViewColumn Header="Услуга">
+                                <GridViewColumn.HeaderContainerStyle>
+                                    <Style TargetType="GridViewColumnHeader" BasedOn="{StaticResource SortableHeaderStyle}">
+                                        <EventSetter Event="Click" Handler="ColumnHeader_Click"/>
+                                    </Style>
+                                </GridViewColumn.HeaderContainerStyle>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Service.Naimenovanie}" 
+                                                   VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"
+                                                   Margin="10,0"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <!-- Стоимость -->
+                            <GridViewColumn Header="Стоимость">
+                                <GridViewColumn.HeaderContainerStyle>
+                                    <Style TargetType="GridViewColumnHeader" BasedOn="{StaticResource SortableHeaderStyle}">
+                                        <EventSetter Event="Click" Handler="ColumnHeader_Click"/>
+                                    </Style>
+                                </GridViewColumn.HeaderContainerStyle>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Service.Stoimost, StringFormat={}{0:N2} руб.}" 
+                                                   HorizontalAlignment="Center"
+                                                   VerticalAlignment="Center"
+                                                   Margin="0,0,10,0"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <!-- Время (мин) -->
+                            <GridViewColumn Header="Длительность, мин.">
+                                <GridViewColumn.HeaderContainerStyle>
+                                    <Style TargetType="GridViewColumnHeader" BasedOn="{StaticResource SortableHeaderStyle}">
+                                        <EventSetter Event="Click" Handler="ColumnHeader_Click"/>
+                                    </Style>
+                                </GridViewColumn.HeaderContainerStyle>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Service.Dlitelnost}" 
+                                                   HorizontalAlignment="Center" 
+                                                   VerticalAlignment="Center"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+
+                <!-- Кнопки -->
+                <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="20,20" VerticalAlignment="Center">
+                    <Button Content="Отмена" Width="120" Height="35" Margin="0,0,10,0" BorderThickness="2"
+                            Click="BtnCancel_Click" BorderBrush="#FF3D4154" Foreground="#FF3D4154" Background="White" FontWeight="Bold" Cursor="Hand" FontSize="15" />
+                    <Button Content="Выбрать" Width="120" Height="35" 
+                            Style="{StaticResource LoginButtonStyle}" Click="BtnSelect_Click" FontSize="15"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

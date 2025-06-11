@@ -1,0 +1,424 @@
+﻿<Window x:Class="Avtoservis.AddEdit_Zakaz"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Avtoservis"
+        mc:Ignorable="d"
+        Title="Добавление / Редактирование заказа" 
+        Height="700" Width="1000" MinHeight="700" MinWidth="1000" 
+        WindowStartupLocation="CenterScreen" WindowState="Maximized"
+        FontSize="16" FontFamily="Century Gothic">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="#282B38"/>
+
+        <!-- Canvas для выпадающих списков -->
+        <Canvas x:Name="PopupCanvas" Panel.ZIndex="1000"/>
+
+        <TextBlock x:Name="TextBlockZagolovok" Text="Добавление / редактирование заказа" 
+                   FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" 
+                   FontWeight="Bold" Margin="0,25,0,0" Foreground="White"/>
+
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel HorizontalAlignment="Center" Margin="20" Width="900" VerticalAlignment="Center">
+                <!-- Блок выбора клиента и автомобиля -->
+                <Border BorderBrush="#E0E0E0" BorderThickness="0,0,0,1" Padding="0,0,0,15" Margin="0,20,0,20">
+                    <StackPanel>
+                        <TextBlock Text="Клиент и автомобиль" FontSize="18" FontWeight="SemiBold" Margin="0,0,0,10"/>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Width="200" VerticalAlignment="Center">
+                <Run Text="Клиент" Foreground="Black"/>
+                <Run Text="*" Foreground="#FF567BFF"/>
+                            </TextBlock>
+                            <Button x:Name="BtnClient" Content="Выберите клиента" 
+                    Style="{StaticResource GrayComboButtonStyle}" 
+                    Click="BtnSelect_Click" Width="450" Margin="10,0,10,0" 
+                    Height="40" FontSize="15"/>
+                            <Button x:Name="BtnAddClient" Content="+" 
+                    Style="{StaticResource RoundAddButtonStyle}" 
+                    Click="BtnAddClient_Click" ToolTip="Добавить нового клиента" FontSize="24"/>
+                        </StackPanel>
+
+                        <!-- Панель для добавления нового клиента -->
+                        <StackPanel x:Name="NewClientPanel" Margin="10,10,0,10" Visibility="Collapsed">
+                            <StackPanel Orientation="Horizontal" Margin="0,5">
+                                <TextBlock Width="200" VerticalAlignment="Center">
+                                    <Run Text="Фамилия"></Run>
+                                    <Run Text="*" Foreground="#FF567BFF"></Run>
+                                </TextBlock>
+                                <TextBox x:Name="TextBoxNewClientFamiliya" Width="300" Height="35" Margin="10,0,0,0" Padding="8,4,0,0" FontSize="16"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,5">
+                                <TextBlock Width="200" VerticalAlignment="Center">
+                                    <Run Text="Имя"></Run>
+                                    <Run Text="*" Foreground="#FF567BFF"></Run>
+                                </TextBlock>
+                                <TextBox x:Name="TextBoxNewClientImya" Width="300" Height="35" Margin="10,0,0,0" Padding="8,4,0,0" FontSize="16"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,5">
+                                <TextBlock Width="200" VerticalAlignment="Center">
+                                    <Run Text="Отчество"></Run>
+                                </TextBlock>
+                                <TextBox x:Name="TextBoxNewClientOtchestvo" Width="300" Height="35" Margin="10,0,0,0" Padding="8,4,0,0" FontSize="16"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,5">
+                                <TextBlock Width="200" VerticalAlignment="Center">
+                                    <Run Text="Дата рождения"></Run>
+                                    <Run Text="*" Foreground="#FF567BFF"></Run>
+                                </TextBlock>
+                                <Button x:Name="BtnNewClientDataRojdeniya" Content="Выберите дату рождения" 
+                        Style="{StaticResource GrayComboButtonStyle}" 
+                        Click="BtnNewClientDataRojdeniya_Click" Width="300" Margin="10,0,0,0" Height="35" FontSize="15"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,5">
+                                <TextBlock Width="200" VerticalAlignment="Center">
+                                    <Run Text="Номер телефона"></Run>
+                                    <Run Text="*" Foreground="#FF567BFF"></Run>
+                                </TextBlock>
+                                <TextBox x:Name="TextBoxNewClientPhone" Width="300" Height="35" Margin="10,0,0,0" Padding="8,4,0,0" FontSize="16"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+                                <Button Content="Отмена" Click="BtnCancelNewClient_Click" 
+                        Style="{StaticResource DeleteButtonStyle3}" Width="100" Margin="0,0,10,0"/>
+                                <Button Content="Сохранить" Click="BtnSaveNewClient_Click" 
+                        Style="{StaticResource LoginButtonStyle2}" Width="120" Height="35"/>
+                            </StackPanel>
+                        </StackPanel>
+
+                        <StackPanel x:Name="ClientContactPanel" Orientation="Horizontal" Margin="0,10" Visibility="Collapsed">
+                            <TextBlock Width="200" Text="Контактные данные:" VerticalAlignment="Center"/>
+                            <TextBlock x:Name="ClientContactInfo" Width="500" Margin="10,0,0,0"/>
+                        </StackPanel>
+
+                        <StackPanel x:Name="AutoPanel" Orientation="Horizontal" Margin="0,10" Visibility="Collapsed">
+                            <TextBlock Width="200" VerticalAlignment="Center">
+                <Run Text="Автомобиль" Foreground="Black"/>
+                <Run Text="*" Foreground="#FF567BFF"/>
+                            </TextBlock>
+                            <Button x:Name="BtnAuto" Content="Выберите автомобиль" 
+                    Style="{StaticResource GrayComboButtonStyle}" 
+                    Click="BtnSelect_Click" Width="450" Margin="10,0,10,0" 
+                    Height="40" FontSize="15"/>
+                            <Button x:Name="BtnAddAuto" Content="+" 
+                    Style="{StaticResource RoundAddButtonStyle}" 
+                    Click="BtnAddAuto_Click" ToolTip="Добавить новый автомобиль" FontSize="24"/>
+                        </StackPanel>
+
+                        <!-- Панель для добавления нового автомобиля -->
+                        <StackPanel x:Name="NewAutoPanel" Margin="10,10,0,10" Visibility="Collapsed">
+                            <!-- Выбор марки -->
+                            <StackPanel Orientation="Horizontal" Margin="0,5">
+                                <TextBlock Width="200" VerticalAlignment="Center">
+                    <Run Text="Марка" Foreground="Black"/>
+                    <Run Text="*" Foreground="#FF567BFF"/>
+                                </TextBlock>
+                                <Button x:Name="BtnNewAutoMarka" Content="Выберите марку" 
+                        Style="{StaticResource GrayComboButtonStyle}" 
+                        Click="BtnNewAutoMarka_Click" Width="300" Margin="10,0,0,0" 
+                        Height="35" FontSize="15"/>
+                            </StackPanel>
+
+                            <!-- Выбор модели -->
+                            <StackPanel x:Name="NewAutoModelPanel" Orientation="Horizontal" Margin="0,5" Visibility="Collapsed">
+                                <TextBlock Width="200" VerticalAlignment="Center">
+                    <Run Text="Модель" Foreground="Black"/>
+                    <Run Text="*" Foreground="#FF567BFF"/>
+                                </TextBlock>
+                                <Button x:Name="BtnNewAutoModel" Content="Выберите модель" 
+                        Style="{StaticResource GrayComboButtonStyle}" 
+                        Click="BtnNewAutoModel_Click" Width="300" Margin="10,0,0,0" 
+                        Height="35" FontSize="15"/>
+                            </StackPanel>
+
+                            <!-- Выбор комплектации -->
+                            <StackPanel x:Name="NewAutoKomplektaciyaPanel" Orientation="Horizontal" Margin="0,5" Visibility="Collapsed">
+                                <TextBlock Width="200" VerticalAlignment="Center">
+                    <Run Text="Комплектация" Foreground="Black"/>
+                    <Run Text="*" Foreground="#FF567BFF"/>
+                                </TextBlock>
+                                <Button x:Name="BtnNewAutoKomplektaciya" Content="Выберите комплектацию" 
+                        Style="{StaticResource GrayComboButtonStyle}" 
+                        Click="BtnNewAutoKomplektaciya_Click" Width="300" Margin="10,0,0,0" 
+                        Height="35" FontSize="15"/>
+                            </StackPanel>
+
+                            <!-- Информация о комплектации -->
+                            <StackPanel x:Name="NewAutoKomplektaciyaInfoPanel" Orientation="Horizontal" Margin="0,5" Visibility="Collapsed">
+                                <TextBlock Width="200" Text="Характеристики:" VerticalAlignment="Center"/>
+                                <TextBlock x:Name="NewAutoKomplektaciyaInfo" Width="auto" Margin="10,7,0,0" TextWrapping="Wrap" Height="30" VerticalAlignment="Center"/>
+                            </StackPanel>
+
+                            <!-- Дополнительные поля автомобиля -->
+                            <StackPanel Orientation="Horizontal" Margin="0,5">
+                                <TextBlock Width="200" Text="VIN-номер:" VerticalAlignment="Center"/>
+                                <TextBox x:Name="TextBoxNewAutoVin" Width="300" Height="35" Margin="10,0,0,0" Padding="8,4,0,0" FontSize="16" CharacterCasing="Upper" MaxLength="17"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,5">
+                                <TextBlock Width="200" Text="Гос-номер:" VerticalAlignment="Center"/>
+                                <TextBox x:Name="TextBoxNewAutoGosNumber" Width="300" Height="35" Margin="10,0,0,0" Padding="8,4,0,0" FontSize="16" CharacterCasing="Upper"/>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+                                <Button Content="Отмена" Click="BtnCancelNewAuto_Click"  
+                        Style="{StaticResource DeleteButtonStyle3}" Width="100" Margin="0,0,10,0"/>
+                                <Button Content="Сохранить" Click="BtnSaveNewAuto_Click" 
+                        Style="{StaticResource LoginButtonStyle2}" Width="120" Height="35"/>
+                            </StackPanel>
+                        </StackPanel>
+
+                        <StackPanel x:Name="AutoInfoPanel" Orientation="Horizontal" Margin="0,10" Visibility="Collapsed">
+                            <TextBlock Width="200" Text="Информация:" VerticalAlignment="Center"/>
+                            <TextBlock x:Name="AutoInfo" Width="500" Margin="10,0,0,0" TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <!-- Блок дат и рабочего места -->
+                <Border BorderBrush="#E0E0E0" BorderThickness="0,0,0,1" Padding="0,0,0,15" Margin="0,0,0,20">
+                    <StackPanel>
+                        <TextBlock Text="Дата и рабочее место" FontSize="18" FontWeight="SemiBold" Margin="0,0,0,10"/>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,10">
+                            <TextBlock Width="200" VerticalAlignment="Center">
+                <Run Text="Дата приёма" Foreground="Black"/>
+                <Run Text="*" Foreground="#FF567BFF"/>
+                            </TextBlock>
+                            <Button x:Name="BtnDatePriem" Content="Выберите дату приёма" 
+                    Style="{StaticResource GrayComboButtonStyle}" 
+                    Click="BtnDatePriem_Click" Width="220" Margin="10,0,0,0" 
+                    Height="40" FontSize="15"/>
+                            <ComboBox x:Name="ComboHourPriem" Width="80" Height="35" Margin="10,0,0,0" FontSize="15" SelectedIndex="0"/>
+                            <TextBlock Text=":" VerticalAlignment="Center" Margin="5,0,5,0"/>
+                            <ComboBox x:Name="ComboMinutePriem" Width="80" Height="35" Margin="0,0,0,0" FontSize="15" SelectedIndex="0"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,10">
+                            <TextBlock Width="200" VerticalAlignment="Center">
+                <Run Text="Дата выдачи" Foreground="Black"/>
+                <Run Text="*" Foreground="#FF567BFF"/>
+                            </TextBlock>
+                            <Button x:Name="BtnDateVidacha" Content="Выберите дату выдачи" 
+                    Style="{StaticResource GrayComboButtonStyle}" 
+                    Click="BtnDateVidacha_Click" Width="220" Margin="10,0,0,0" 
+                    Height="40" FontSize="15"/>
+                            <ComboBox x:Name="ComboHourVidacha" Width="80" Height="35" Margin="10,0,0,0" FontSize="15" SelectedIndex="0"/>
+                            <TextBlock Text=":" VerticalAlignment="Center" Margin="5,0,5,0"/>
+                            <ComboBox x:Name="ComboMinuteVidacha" Width="80" Height="35" Margin="0,0,0,0" FontSize="15" SelectedIndex="0"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,10">
+                            <TextBlock Width="200" VerticalAlignment="Center">
+                <Run Text="Рабочее место" Foreground="Black"/>
+                <Run Text="*" Foreground="#FF567BFF"/>
+                            </TextBlock>
+                            <Button x:Name="BtnWorkPlace" Content="Выберите рабочее место" 
+                    Style="{StaticResource GrayComboButtonStyle}" 
+                    Click="BtnSelect_Click" Width="300" Margin="10,0,0,0" 
+                    Height="40" FontSize="15"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <!-- Блок исполнителя -->
+                <Border BorderBrush="#E0E0E0" BorderThickness="0,0,0,1" Padding="0,0,0,15" Margin="0,0,0,20">
+                    <StackPanel>
+                        <TextBlock Text="Исполнитель" FontSize="18" FontWeight="SemiBold" Margin="0,0,0,10"/>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Width="200" VerticalAlignment="Center">
+                                <Run Text="Исполнитель" Foreground="Black"/>
+                                <Run Text="*" Foreground="#FF567BFF"/>
+                            </TextBlock>
+                            <Button x:Name="BtnEmployee" Content="Выберите исполнителя" 
+                                    Style="{StaticResource GrayComboButtonStyle}" 
+                                    Click="BtnSelect_Click" Width="500" Margin="10,0,0,0" 
+                                    Height="40" FontSize="15" IsEnabled="{Binding IsEmployeeEditable}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <!-- Блок услуг -->
+                <Border BorderBrush="#E0E0E0" BorderThickness="0,0,0,1" Padding="0,0,0,15" Margin="0,0,0,20">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Услуги" FontSize="18" FontWeight="SemiBold" Margin="0,0,0,10" Width="120"/>
+                            <Button x:Name="BtnAddService" Content="Добавить услугу" 
+                    Style="{StaticResource AddButtonStyle}" 
+                    Click="BtnAddService_Click" Margin="20,0,0,0" 
+                    Height="30" FontSize="14"/>
+                        </StackPanel>
+
+                        <!-- Список выбранных услуг -->
+                        <ItemsControl x:Name="ServicesContainer" Margin="0,10,0,0">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border BorderBrush="#E0E0E0" BorderThickness="0,0,0,1" Padding="0,0,0,5" Margin="0,0,0,5" MinHeight="35">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="150"/>
+                                                <ColumnDefinition Width="100"/>
+                                                <ColumnDefinition Width="60"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Text="{Binding dm_Raboti.Naimenovanie}" Grid.Column="0" VerticalAlignment="Center" Margin="5,0"/>
+                                            <TextBlock Text="{Binding Zakrep_stoimost, StringFormat={}{0:N2} руб.}" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5,0"/>
+                                            <TextBlock Text="{Binding dm_Raboti.Dlitelnost, StringFormat={}{0} мин}" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,0"/>
+                                            <Button Content="✕" Grid.Column="3" Click="BtnRemoveService_Click" 
+                            Style="{StaticResource DeleteButtonStyle2}" 
+                            HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5,0" Padding="8,0"/>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                </Border>
+
+                <!-- Блок деталей -->
+                <Border BorderBrush="#E0E0E0" BorderThickness="0,0,0,1" Padding="0,0,0,15" Margin="0,0,0,20">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Детали" FontSize="18" FontWeight="SemiBold" Margin="0,0,0,10" Width="120"/>
+                            <Button x:Name="BtnAddDetail" Content="Добавить деталь" 
+                    Style="{StaticResource AddButtonStyle}" 
+                    Click="BtnAddDetail_Click" Margin="20,0,0,0" 
+                    Height="30" FontSize="14"/>
+                        </StackPanel>
+
+                        <!-- Список выбранных деталей -->
+                        <ItemsControl x:Name="DetailsContainer" Margin="0,10,0,0">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border BorderBrush="#E0E0E0" BorderThickness="0,0,0,1" Padding="0,0,0,5" Margin="0,0,0,5">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="120"/>
+                                                <ColumnDefinition Width="120"/>
+                                                <ColumnDefinition Width="100"/>
+                                                <ColumnDefinition Width="120"/>
+                                                <ColumnDefinition Width="60"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Text="{Binding dm_Detali.Nazvanie}" Grid.Column="0" VerticalAlignment="Center" Margin="5,0"/>
+                                            <TextBlock Text="{Binding Zakrep_cena, StringFormat={}{0:N2} руб.}" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5,0"/>
+
+                                            <StackPanel Orientation="Horizontal" Grid.Column="2" HorizontalAlignment="Center">
+                                                <Button Content="-" Width="30" Height="30" Margin="0,0,5,0"
+                                        Style="{StaticResource QuantityButtonStyle}"
+                                        Click="DecreaseQuantity_Click"/>
+                                                <TextBlock Text="{Binding Kolichestvo}" Width="30" TextAlignment="Center" VerticalAlignment="Center"
+           x:Name="QuantityText"/>
+                                                <Button Content="+" Width="30" Height="30" Margin="5,0,0,0"
+                                        Style="{StaticResource QuantityButtonStyle}"
+                                        Click="IncreaseQuantity_Click"/>
+                                            </StackPanel>
+
+                                            <TextBlock Text="{Binding TotalPrice, StringFormat={}{0:N2} руб.}" Grid.Column="4" 
+           HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5,0"
+           x:Name="TotalPriceText"/>
+
+                                            <CheckBox Content="Клиента" IsChecked="{Binding Detal_klienta}" Grid.Column="3"
+                                      VerticalAlignment="Center" HorizontalAlignment="Center"
+                                      Checked="DetailClient_Checked" Unchecked="DetailClient_Unchecked"/>
+
+                                            <Button Content="✕" Grid.Column="5" Click="BtnRemoveDetail_Click" 
+                                    Style="{StaticResource DeleteButtonStyle2}" 
+                                    HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5,0" Padding="8,0"/>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                </Border>
+
+                <!-- Блок статусов -->
+                <Border BorderBrush="#E0E0E0" BorderThickness="0,0,0,1" Padding="0,0,0,15" Margin="0,0,0,20">
+                    <StackPanel>
+                        <TextBlock Text="Статусы" FontSize="18" FontWeight="SemiBold" Margin="0,0,0,10"/>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,10">
+                            <TextBlock Width="200" VerticalAlignment="Center">
+                <Run Text="Статус заказа" Foreground="Black"/>
+                <Run Text="*" Foreground="#FF567BFF"/>
+                            </TextBlock>
+                            <Button x:Name="BtnOrderStatus" Content="Принят" 
+                    Style="{StaticResource GrayComboButtonStyle}" 
+                    Click="BtnStatus_Click" Width="300" Margin="10,0,0,0" 
+                    Height="40" FontSize="15"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,10">
+                            <TextBlock Width="200" VerticalAlignment="Center">
+                <Run Text="Статус оплаты" Foreground="Black"/>
+                <Run Text="*" Foreground="#FF567BFF"/>
+                            </TextBlock>
+                            <Button x:Name="BtnPaymentStatus" Content="Не оплачен" 
+                    Style="{StaticResource GrayComboButtonStyle}" 
+                    Click="BtnStatus_Click" Width="300" Margin="10,0,0,0" 
+                    Height="40" FontSize="15"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <!-- Блок фотографий -->
+                <Border BorderBrush="#E0E0E0" BorderThickness="0,0,0,1" Padding="0,0,0,15" Margin="0,0,0,20">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Фотографии" FontSize="18" FontWeight="SemiBold" Margin="0,0,0,10" Width="120"/>
+                            <Button x:Name="BtnAddPhoto" Content="Добавить фото" 
+                                    Style="{StaticResource AddButtonStyle}" 
+                                    Click="BtnAddPhoto_Click" Margin="20,0,0,0" 
+                                    Height="30" FontSize="14"/>
+                        </StackPanel>
+
+                        <ItemsControl x:Name="PhotosContainer" Margin="0,10,0,0">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel Orientation="Horizontal"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Margin="5" BorderBrush="LightGray" BorderThickness="1" Padding="5">
+                                        <StackPanel>
+                                            <Image Source="{Binding Image}" Width="100" Height="100" Stretch="Uniform"/>
+                                            <Button Content="Удалить" Click="BtnRemovePhoto_Click" 
+                                                    Style="{StaticResource DeleteButtonStyle}" 
+                                                    Margin="0,5,0,0" FontSize="14"/>
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                </Border>
+
+                <!-- Блок итоговой стоимости -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+                    <TextBlock Text="Итого:" FontSize="18" FontWeight="Bold" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="TotalSumText" Text="0 ₽" FontSize="18" FontWeight="Bold" 
+                               Margin="10,0,0,0" VerticalAlignment="Center" Foreground="#FF567BFF"/>
+                </StackPanel>
+
+                <!-- Кнопки -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,30,0,20">
+                    <Button x:Name="BtnDefects" Content="Заполнить дефекты" 
+                            Style="{StaticResource LoginButtonStyle2}"  Click="BtnDefects_Click"
+                            Width="200" Height="40" Margin="0,0,20,0" FontSize="16"/>
+                    <Button x:Name="BtnSave" Content="Сохранить" 
+                            Style="{StaticResource LoginButtonStyle}" 
+                            Width="200" Height="40" Click="BtnSave_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

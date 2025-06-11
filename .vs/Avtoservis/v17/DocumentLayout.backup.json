@@ -1,0 +1,177 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6A26A9EC-F064-4F7C-8DAE-A8A9FD45A9C5}|Avtoservis\\Avtoservis.csproj|f:\\\u0434\u0438\u043F\u043B\u043E\u043C\\avtoservis\\avtoservis\\admin_klienti.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6A26A9EC-F064-4F7C-8DAE-A8A9FD45A9C5}|Avtoservis\\Avtoservis.csproj|solutionrelative:avtoservis\\admin_klienti.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A26A9EC-F064-4F7C-8DAE-A8A9FD45A9C5}|Avtoservis\\Avtoservis.csproj|F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\avtoservis\\addedit_detali.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6A26A9EC-F064-4F7C-8DAE-A8A9FD45A9C5}|Avtoservis\\Avtoservis.csproj|solutionrelative:avtoservis\\addedit_detali.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A26A9EC-F064-4F7C-8DAE-A8A9FD45A9C5}|Avtoservis\\Avtoservis.csproj|F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\avtoservis\\admin.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{6A26A9EC-F064-4F7C-8DAE-A8A9FD45A9C5}|Avtoservis\\Avtoservis.csproj|solutionrelative:avtoservis\\admin.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A26A9EC-F064-4F7C-8DAE-A8A9FD45A9C5}|Avtoservis\\Avtoservis.csproj|F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\avtoservis\\profilpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6A26A9EC-F064-4F7C-8DAE-A8A9FD45A9C5}|Avtoservis\\Avtoservis.csproj|solutionrelative:avtoservis\\profilpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A26A9EC-F064-4F7C-8DAE-A8A9FD45A9C5}|Avtoservis\\Avtoservis.csproj|F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\avtoservis\\profilpage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{6A26A9EC-F064-4F7C-8DAE-A8A9FD45A9C5}|Avtoservis\\Avtoservis.csproj|solutionrelative:avtoservis\\profilpage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A26A9EC-F064-4F7C-8DAE-A8A9FD45A9C5}|Avtoservis\\Avtoservis.csproj|F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\avtoservis\\admin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6A26A9EC-F064-4F7C-8DAE-A8A9FD45A9C5}|Avtoservis\\Avtoservis.csproj|solutionrelative:avtoservis\\admin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A26A9EC-F064-4F7C-8DAE-A8A9FD45A9C5}|Avtoservis\\Avtoservis.csproj|F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\avtoservis\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6A26A9EC-F064-4F7C-8DAE-A8A9FD45A9C5}|Avtoservis\\Avtoservis.csproj|solutionrelative:avtoservis\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A26A9EC-F064-4F7C-8DAE-A8A9FD45A9C5}|Avtoservis\\Avtoservis.csproj|F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\avtoservis\\entities\\avtoservicbd.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{6A26A9EC-F064-4F7C-8DAE-A8A9FD45A9C5}|Avtoservis\\Avtoservis.csproj|solutionrelative:avtoservis\\entities\\avtoservicbd.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A26A9EC-F064-4F7C-8DAE-A8A9FD45A9C5}|Avtoservis\\Avtoservis.csproj|F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\avtoservis\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A26A9EC-F064-4F7C-8DAE-A8A9FD45A9C5}|Avtoservis\\Avtoservis.csproj|solutionrelative:avtoservis\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A26A9EC-F064-4F7C-8DAE-A8A9FD45A9C5}|Avtoservis\\Avtoservis.csproj|F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\avtoservis\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6A26A9EC-F064-4F7C-8DAE-A8A9FD45A9C5}|Avtoservis\\Avtoservis.csproj|solutionrelative:avtoservis\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Admin_Klienti.xaml",
+              "DocumentMoniker": "F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\Avtoservis\\Admin_Klienti.xaml",
+              "RelativeDocumentMoniker": "Avtoservis\\Admin_Klienti.xaml",
+              "ToolTip": "F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\Avtoservis\\Admin_Klienti.xaml",
+              "RelativeToolTip": "Avtoservis\\Admin_Klienti.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-15T14:30:54.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddEdit_Detali.xaml",
+              "DocumentMoniker": "F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\Avtoservis\\AddEdit_Detali.xaml",
+              "RelativeDocumentMoniker": "Avtoservis\\AddEdit_Detali.xaml",
+              "ToolTip": "F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\Avtoservis\\AddEdit_Detali.xaml",
+              "RelativeToolTip": "Avtoservis\\AddEdit_Detali.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-15T13:56:25.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProfilPage.xaml.cs",
+              "DocumentMoniker": "F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\Avtoservis\\ProfilPage.xaml.cs",
+              "RelativeDocumentMoniker": "Avtoservis\\ProfilPage.xaml.cs",
+              "ToolTip": "F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\Avtoservis\\ProfilPage.xaml.cs",
+              "RelativeToolTip": "Avtoservis\\ProfilPage.xaml.cs",
+              "ViewState": "AQIAAJwAAAAAAAAAAADwv7MAAABaAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADjSURBVDhPY0AGretv/t9x7tl/KJd0sOfii/\u002Bimfv\u002Bbzv7lGhDGBlid2Eo1pTkZNiSLsVQWVkJFWFgYGdnZygoKGAwNjZmhAphgt0XnsFd8P79\u002B/9Pnz6F47CwsP/R0dH/z549i2IhE5QGg1P3PzMsTtVgsFTiYvj27RtUFAF\u002B//7N0NfXx4BsCIoBIVoMDOaKnFg1wwDIkAkTJkB5oDBAAnFxcf/b29uhPNygsLCQYdWqVWC9KC748eMHlEU8QDGAHDBqABUMQEkHmZmZ/9\u002B\u002BfQvl4QbCwsIM06dPx50niAcMDADfJl5g9BqhpwAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-04-07T09:22:22.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProfilPage.xaml",
+              "DocumentMoniker": "F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\Avtoservis\\ProfilPage.xaml",
+              "RelativeDocumentMoniker": "Avtoservis\\ProfilPage.xaml",
+              "ToolTip": "F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\Avtoservis\\ProfilPage.xaml",
+              "RelativeToolTip": "Avtoservis\\ProfilPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-07T09:22:25.593Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Admin.xaml.cs",
+              "DocumentMoniker": "F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\Avtoservis\\Admin.xaml.cs",
+              "RelativeDocumentMoniker": "Avtoservis\\Admin.xaml.cs",
+              "ToolTip": "F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\Avtoservis\\Admin.xaml.cs",
+              "RelativeToolTip": "Avtoservis\\Admin.xaml.cs",
+              "ViewState": "AgIAAKoAAAAAAAAAAAAuwMIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T09:22:25.61Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Admin.xaml",
+              "DocumentMoniker": "F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\Avtoservis\\Admin.xaml",
+              "RelativeDocumentMoniker": "Avtoservis\\Admin.xaml",
+              "ToolTip": "F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\Avtoservis\\Admin.xaml",
+              "RelativeToolTip": "Avtoservis\\Admin.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-07T09:22:25.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AvtoservicBD.edmx [Diagram1]",
+              "DocumentMoniker": "F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\Avtoservis\\Entities\\AvtoservicBD.edmx",
+              "RelativeDocumentMoniker": "Avtoservis\\Entities\\AvtoservicBD.edmx",
+              "ToolTip": "D:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\Avtoservis\\Entities\\AvtoservicBD.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2025-04-07T09:22:25.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "App.xaml",
+              "DocumentMoniker": "F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\Avtoservis\\App.xaml",
+              "RelativeDocumentMoniker": "Avtoservis\\App.xaml",
+              "ToolTip": "F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\Avtoservis\\App.xaml",
+              "RelativeToolTip": "Avtoservis\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-07T09:22:25.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\Avtoservis\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Avtoservis\\MainWindow.xaml",
+              "ToolTip": "F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\Avtoservis\\MainWindow.xaml",
+              "RelativeToolTip": "Avtoservis\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-07T09:22:25.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\Avtoservis\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Avtoservis\\MainWindow.xaml.cs",
+              "ToolTip": "F:\\\u0414\u0438\u043F\u043B\u043E\u043C\\Avtoservis\\Avtoservis\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Avtoservis\\MainWindow.xaml.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAuwE0AAAAdAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADjSURBVDhPY0AGretv/t9x7tl/KJd0sOfii/\u002Bimfv\u002Bbzv7lGhDGBlid2Eo1pTkZNiSLsVQWVkJFWFgYGdnZygoKGAwNjZmhAphgt0XnsFd8P79\u002B/9Pnz6F47CwsP/R0dH/z549i2IhE5QGg1P3PzMsTtVgsFTiYvj27RtUFAF\u002B//7N0NfXx4BsCIoBIVoMDOaKnFg1wwDIkAkTJkB5oDBAAnFxcf/b29uhPNygsLCQYdWqVWC9KC748eMHlEU8QDGAHDBqABUMQEkHmZmZ/9\u002B\u002BfQvl4QbCwsIM06dPx50niAcMDADfJl5g9BqhpwAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-04-07T09:22:25.615Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

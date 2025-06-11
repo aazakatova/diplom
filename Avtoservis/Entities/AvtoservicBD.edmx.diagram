@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6c3c67eb3b5d4415823ed0ccf7065d28" Name="Diagram1">
+        <EntityTypeShape EntityType="user80_dbModel.dm_Avtomobili" Width="1.5" PointX="9.75" PointY="7.5" />
+        <EntityTypeShape EntityType="user80_dbModel.dm_Defekti" Width="1.5" PointX="14.25" PointY="3.5" />
+        <EntityTypeShape EntityType="user80_dbModel.dm_Detali" Width="1.5" PointX="15" PointY="14.25" />
+        <EntityTypeShape EntityType="user80_dbModel.dm_Detali_v_zakaze" Width="1.5" PointX="17.25" PointY="7.5" />
+        <EntityTypeShape EntityType="user80_dbModel.dm_Foto_v_zakaze" Width="1.5" PointX="14.25" PointY="10.75" />
+        <EntityTypeShape EntityType="user80_dbModel.dm_Gruppi_avto" Width="1.5" PointX="0.75" PointY="8" />
+        <EntityTypeShape EntityType="user80_dbModel.dm_Komplektacii_avto" Width="1.5" PointX="7.5" PointY="6.875" />
+        <EntityTypeShape EntityType="user80_dbModel.dm_Marki_avto" Width="1.5" PointX="3" PointY="7.5" />
+        <EntityTypeShape EntityType="user80_dbModel.dm_Modeli_avto" Width="1.5" PointX="5.25" PointY="7.5" />
+        <EntityTypeShape EntityType="user80_dbModel.dm_Proizvoditeli" Width="1.5" PointX="12.75" PointY="13.75" />
+        <EntityTypeShape EntityType="user80_dbModel.dm_Rabochie_mesta" Width="1.5" PointX="9.75" PointY="4.875" />
+        <EntityTypeShape EntityType="user80_dbModel.dm_Raboti" Width="1.5" PointX="12" PointY="0.75" />
+        <EntityTypeShape EntityType="user80_dbModel.dm_Raboti_v_zakaze" Width="1.5" PointX="14.25" PointY="7.625" />
+        <EntityTypeShape EntityType="user80_dbModel.dm_Roli" Width="1.5" PointX="5.25" PointY="20" />
+        <EntityTypeShape EntityType="user80_dbModel.dm_Strani" Width="1.5" PointX="0.75" PointY="5" />
+        <EntityTypeShape EntityType="user80_dbModel.dm_Tipi_detalei" Width="1.5" PointX="12.75" PointY="16.125" />
+        <EntityTypeShape EntityType="user80_dbModel.dm_Tipi_dvigatelya" Width="1.5" PointX="5.25" PointY="4.375" />
+        <EntityTypeShape EntityType="user80_dbModel.dm_Tipi_korobki_peredach" Width="1.5" PointX="5.25" PointY="10.75" />
+        <EntityTypeShape EntityType="user80_dbModel.dm_Tipi_kuzova" Width="1.5" PointX="5.25" PointY="15.5" />
+        <EntityTypeShape EntityType="user80_dbModel.dm_Tipi_privoda" Width="1.5" PointX="5.25" PointY="13.125" />
+        <EntityTypeShape EntityType="user80_dbModel.dm_Users" Width="1.5" PointX="7.5" PointY="18.75" />
+        <EntityTypeShape EntityType="user80_dbModel.dm_Uzli_avto" Width="1.5" PointX="12" PointY="4" />
+        <EntityTypeShape EntityType="user80_dbModel.dm_Zakazi" Width="1.5" PointX="12" PointY="6.5" />
+        <AssociationConnector Association="user80_dbModel.FK_dm_Avtomobili_dm_Komplektacii_avto" />
+        <AssociationConnector Association="user80_dbModel.FK_dm_Avtomobili_dm_Users" />
+        <AssociationConnector Association="user80_dbModel.FK_dm_Zakazi_dm_Avtomobili" />
+        <AssociationConnector Association="user80_dbModel.FK_dm_Defekti_dm_Uzli_avto" />
+        <AssociationConnector Association="user80_dbModel.FK_dm_Defekti_dm_Zakazi" />
+        <AssociationConnector Association="user80_dbModel.FK_dm_Detali_dm_Proizvoditeli" />
+        <AssociationConnector Association="user80_dbModel.FK_dm_Detali_dm_Tipi_detalei" />
+        <AssociationConnector Association="user80_dbModel.FK_dm_Detali_v_zakaze_dm_Detali" />
+        <AssociationConnector Association="user80_dbModel.FK_dm_Detali_v_zakaze_dm_Zakazi" />
+        <AssociationConnector Association="user80_dbModel.FK_dm_Foto_v_zakaze_dm_Zakazi" />
+        <AssociationConnector Association="user80_dbModel.FK_dm_Marki_avto_dm_Gruppi_avto" />
+        <AssociationConnector Association="user80_dbModel.FK_dm_Komplektacii_avto_dm_Modeli_avto" />
+        <AssociationConnector Association="user80_dbModel.FK_dm_Komplektacii_avto_dm_Tipi_dvigatelya" />
+        <AssociationConnector Association="user80_dbModel.FK_dm_Komplektacii_avto_dm_Tipi_korobki_peredach" />
+        <AssociationConnector Association="user80_dbModel.FK_dm_Komplektacii_avto_dm_Tipi_kuzova" />
+        <AssociationConnector Association="user80_dbModel.FK_dm_Komplektacii_avto_dm_Tipi_privoda" />
+        <AssociationConnector Association="user80_dbModel.FK_dm_Marki_avto_dm_Strani" />
+        <AssociationConnector Association="user80_dbModel.FK_dm_Modeli_avto_dm_Marki_avto" />
+        <AssociationConnector Association="user80_dbModel.FK_dm_Zakazi_dm_Rabochie_mesta" />
+        <AssociationConnector Association="user80_dbModel.FK_dm_Raboti_v_zakaze_dm_Raboti" />
+        <AssociationConnector Association="user80_dbModel.FK_dm_Raboti_v_zakaze_dm_Zakazi" />
+        <AssociationConnector Association="user80_dbModel.FK_dm_Users_dm_Roli" />
+        <AssociationConnector Association="user80_dbModel.FK_dm_Zakazi_dm_Users1" />
+        <AssociationConnector Association="user80_dbModel.FK_dm_Zakazi_dm_Users2" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

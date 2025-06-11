@@ -1,0 +1,145 @@
+﻿<Page x:Class="Avtoservis.Admin_Raboti"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Avtoservis"
+      mc:Ignorable="d" 
+      d:DesignHeight="900" d:DesignWidth="1160"
+      Title="Работы" FontSize="16" FontFamily="Century Gothic" PreviewMouseDown="Page_PreviewMouseDown" UseLayoutRounding="True" SnapsToDevicePixels="True" Cursor="">
+    <Grid>
+        <!-- Основной белый закругленный блок -->
+        <Border Background="White" 
+                CornerRadius="15" 
+                Margin="50" 
+                Padding="30">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="400"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Заголовок -->
+                <TextBlock Text="Работы" 
+                           Grid.ColumnSpan="2"
+                           FontSize="24" 
+                           FontWeight="Bold"
+                           Margin="40,0,0,30"/>
+
+                <!-- Кнопки управления -->
+                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Button x:Name="BtnAdd" Content="Добавить" Style="{StaticResource AddButtonStyle}" Margin="40,0,10,0" Click="BtnAdd_Click"/>
+                    <Button x:Name="BtnDelete" Content="Удалить" Style="{StaticResource DeleteButtonStyle}" Click="BtnDelete_Click"/>
+                    <Button x:Name="BtnRefresh" Style="{StaticResource RoundedButtonStyle}" Width="35" Height="35" Click="BtnRefresh_Click"  Cursor="Hand" BorderBrush="#FFA0A0A0" Background="White" Foreground="#FF042271">
+                        <Image Source="/Images/refresh.png" Stretch="Uniform" Margin="1,0,0,0" Width="19" Height="19"/>
+                    </Button>
+                </StackPanel>
+
+                <!-- Поисковая строка -->
+                <TextBox x:Name="SearchTextBox" Grid.Row="1" Grid.Column="1" Style="{StaticResource SearchTextBoxStyle}" Text="Поиск..." TextChanged="SearchTextBox_TextChanged"  HorizontalAlignment="Right" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
+
+                <!-- ListView с работами -->
+                <ListView x:Name="WorksList" Grid.Row="2" Margin="40,20,40,20" Grid.ColumnSpan="2" HorizontalContentAlignment="Stretch"
+          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+          Style="{StaticResource WorksListViewStyle}"
+          SelectionMode="Single"
+          AlternationCount="1000">
+                    <ListView.View>
+                        <GridView>
+                            <!-- ID -->
+                            <GridViewColumn Header="ID">
+                                <GridViewColumn.HeaderContainerStyle>
+                                    <Style TargetType="GridViewColumnHeader" BasedOn="{StaticResource SortableHeaderStyle}">
+                                        <EventSetter Event="Click" Handler="ColumnHeader_Click"/>
+                                    </Style>
+                                </GridViewColumn.HeaderContainerStyle>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding ID_raboti}" 
+                                                   HorizontalAlignment="Center" Foreground="Black"
+                                                   VerticalAlignment="Center"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <!-- Наименование -->
+                            <GridViewColumn Header="Наименование">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Naimenovanie}" 
+                                                   HorizontalAlignment="Center" Foreground="Black"
+                                                   VerticalAlignment="Center"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <!-- Стоимость -->
+                            <GridViewColumn Header="Стоимость">
+                                <GridViewColumn.HeaderContainerStyle>
+                                    <Style TargetType="GridViewColumnHeader" BasedOn="{StaticResource SortableHeaderStyle}">
+                                        <EventSetter Event="Click" Handler="ColumnHeader_Click"/>
+                                    </Style>
+                                </GridViewColumn.HeaderContainerStyle>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Stoimost, StringFormat={}{0:N2} руб.}"
+                                                   Foreground="Black"
+                                                   HorizontalAlignment="Center"
+                                                   VerticalAlignment="Center"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <!-- Длительность -->
+                            <GridViewColumn Header="Длительность, мин.">
+                                <GridViewColumn.HeaderContainerStyle>
+                                    <Style TargetType="GridViewColumnHeader" BasedOn="{StaticResource SortableHeaderStyle}">
+                                        <EventSetter Event="Click" Handler="ColumnHeader_Click"/>
+                                    </Style>
+                                </GridViewColumn.HeaderContainerStyle>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Dlitelnost}" 
+                                                   HorizontalAlignment="Center" Foreground="Black"
+                                                   VerticalAlignment="Center"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <!-- Кнопка редактирования -->
+                            <GridViewColumn x:Name="EditColumn">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Click="BtnEdit_Click" Cursor="Hand" Width="40" Height="40" HorizontalAlignment="Center" Background="Transparent" BorderBrush="Transparent">
+                                            <Image Source="/Images/icon_edit.png" Stretch="Uniform" Width="35" Height="35"/>
+                                        </Button>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+
+                <!-- Пагинация -->
+                <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,40,10">
+                    
+                    <TextBlock Text="Показывать:" VerticalAlignment="Center" Margin="0,0,10,0" FontSize="14"/>
+                    <Button x:Name="ItemsPerPageButton" Content="20" 
+            Style="{StaticResource ComboBoxStyle}"
+            Click="ItemsPerPageButton_Click"/>
+                    <TextBlock x:Name="PaginationInfo" Text="1-20 из 100" VerticalAlignment="Center" Margin="20,0,20,0" FontSize="14"/>
+
+                    <Button x:Name="BtnPrevPage" Content="Назад" Style="{StaticResource PaginationButtonDisabledStyle}" Margin="0,0,10,0" Click="BtnPrevPage_Click"/>
+                    <Button x:Name="BtnNextPage" Content="Вперед" Style="{StaticResource PaginationButtonDisabledStyle}" Margin="0,0,0,0" Click="BtnNextPage_Click"/>
+                </StackPanel>
+                
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

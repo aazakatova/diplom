@@ -1,0 +1,119 @@
+﻿<Window x:Class="Avtoservis.AddEdit_Defekti"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Avtoservis"
+        mc:Ignorable="d"
+        Title="Дефекты" 
+        Height="650" Width="920" MinHeight="650" MinWidth="920" 
+        WindowStartupLocation="CenterScreen"
+        FontSize="16" FontFamily="Century Gothic"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Верхняя панель / заголовок -->
+        <Grid Grid.Row="0" Background="#282B38">
+            <TextBlock x:Name="TextBlockZagolovok" Text="Дефекты" 
+                       FontSize="20" FontWeight="Bold" 
+                       Foreground="White" 
+                       VerticalAlignment="Center" 
+                       HorizontalAlignment="Center"/>
+        </Grid>
+
+        <!-- Canvas, на котором будут рисоваться “всплывающие” список -->
+        <Canvas x:Name="PopupCanvas" Panel.ZIndex="1000"/>
+
+        <!-- Основная область со скроллом -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel Margin="20" Width="840" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="Дефекты" FontSize="18" FontWeight="SemiBold" Margin="0,10"/>
+
+                <!-- Список дефектов -->
+                <ItemsControl ItemsSource="{Binding Defects}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border BorderBrush="#E0E0E0" BorderThickness="0,0,0,1" Padding="0,0,0,10" Margin="0,0,0,10">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <!-- Левая часть: поля дефекта -->
+                                    <StackPanel>
+                                        <!-- Узел авто (обязательное поле) -->
+                                        <StackPanel Orientation="Horizontal" Margin="0,5">
+                                            <TextBlock Width="150" VerticalAlignment="Center">
+                                                <Run Text="Узел авто"/>
+                                                <Run Text="*" Foreground="#FF567BFF"/>
+                                            </TextBlock>
+                                            <!-- Кнопка вместо ComboBox, высота = 40 -->
+                                            <Button
+                                                Content="{Binding dm_Uzli_avto.Nazvanie_uzla_avto, FallbackValue=Выберите узел}"
+                                                Style="{StaticResource GrayComboButtonStyle}"
+                                                Click="BtnSelectUzel_Click"
+                                                Height="40" Width="500" Margin="10,0,0,0"/>
+                                        </StackPanel>
+
+                                        <!-- Описание (обязательное поле) -->
+                                        <StackPanel Orientation="Horizontal" Margin="0,5">
+                                            <TextBlock Width="150" VerticalAlignment="Top">
+                                                <Run Text="Описание"/>
+                                                <Run Text="*" Foreground="#FF567BFF"/>
+                                            </TextBlock>
+                                            <TextBox Width="500" Height="60" TextWrapping="Wrap" AcceptsReturn="True" Padding="8,4,0,0"
+                                                     Text="{Binding Opisanie, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                                     Margin="10,0,0,0"/>
+                                        </StackPanel>
+
+                                        <!-- Рекомендации (необязательное поле) -->
+                                        <StackPanel Orientation="Horizontal" Margin="0,5">
+                                            <TextBlock Width="150" VerticalAlignment="Top">Рекомендации</TextBlock>
+                                            <TextBox Width="500" Height="60" TextWrapping="Wrap" AcceptsReturn="True" Padding="8,4,0,0"
+                                                     Text="{Binding Rekomendacii, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                                     Margin="10,0,0,0"/>
+                                        </StackPanel>
+
+                                        <!-- Примечания (необязательное поле) -->
+                                        <StackPanel Orientation="Horizontal" Margin="0,5">
+                                            <TextBlock Width="150" VerticalAlignment="Top">Примечания</TextBlock>
+                                            <TextBox Width="500" Height="60" TextWrapping="Wrap" AcceptsReturn="True" Padding="8,4,0,0"
+                                                     Text="{Binding Primechaniya, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                                     Margin="10,0,0,0"/>
+                                        </StackPanel>
+                                    </StackPanel>
+
+                                    <!-- Кнопка удаления конкретного дефекта -->
+                                    <Button Content="✕" Width="30" Height="30" Grid.Column="1"
+                                            VerticalAlignment="Top" Margin="0,0,0,0" Style="{StaticResource DeleteButtonStyle2}"
+                                            Click="BtnRemoveDefect_Click"/>
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+                <!-- Кнопка «Добавить новый дефект» -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,10">
+                    <Button Content="Добавить дефект" Width="160"
+                            Click="BtnAddDefect_Click"
+                            Style="{StaticResource AddButtonStyle}"
+                            FontSize="14" Height="30"/>
+                </StackPanel>
+
+                <!-- Кнопки «Сохранить» / «Отмена» -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,30,0,20">
+                    <Button Content="Отмена" Width="200" Height="40"
+                            Click="BtnCancel_Click" Style="{StaticResource DeleteButtonStyle3}" FontSize="16"/>
+                    <Button Content="Сохранить" Height="40" Margin="0,0,20,0" Width="200"
+                            Click="BtnSave_Click" Style="{StaticResource LoginButtonStyle2}" FontSize="16"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

@@ -1,0 +1,349 @@
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis.csproj.AssemblyReference.cache
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis.csproj.SuggestedBindingRedirects.cache
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\MainWindow.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\App.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis_MarkupCompile.cache
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis_MarkupCompile.lref
+D:\Диплом\Avtoservis\Avtoservis\bin\Debug\Avtoservis.exe.config
+D:\Диплом\Avtoservis\Avtoservis\bin\Debug\Avtoservis.exe
+D:\Диплом\Avtoservis\Avtoservis\bin\Debug\Avtoservis.pdb
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\MainWindow.baml
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis.g.resources
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis.Properties.Resources.resources
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis.csproj.GenerateResource.cache
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis.csproj.CoreCompileInputs.cache
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis.exe
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis.pdb
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\App.baml
+D:\Диплом\Avtoservis\Avtoservis\bin\Debug\EntityFramework.dll
+D:\Диплом\Avtoservis\Avtoservis\bin\Debug\EntityFramework.SqlServer.dll
+D:\Диплом\Avtoservis\Avtoservis\bin\Debug\EntityFramework.xml
+D:\Диплом\Avtoservis\Avtoservis\bin\Debug\EntityFramework.SqlServer.xml
+D:\Диплом\Avtoservis\Avtoservis\bin\Debug\ru\EntityFramework.resources.dll
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis_Content.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis.csproj.CopyComplete
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\CaptchaWindow.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\CaptchaWindow.baml
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin.baml
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\ProfilPage.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\ProfilPage.baml
+G:\Диплом\Avtoservis\Avtoservis\bin\Debug\Avtoservis.exe.config
+G:\Диплом\Avtoservis\Avtoservis\bin\Debug\Avtoservis.exe
+G:\Диплом\Avtoservis\Avtoservis\bin\Debug\Avtoservis.pdb
+G:\Диплом\Avtoservis\Avtoservis\bin\Debug\EntityFramework.dll
+G:\Диплом\Avtoservis\Avtoservis\bin\Debug\EntityFramework.SqlServer.dll
+G:\Диплом\Avtoservis\Avtoservis\bin\Debug\EntityFramework.xml
+G:\Диплом\Avtoservis\Avtoservis\bin\Debug\EntityFramework.SqlServer.xml
+G:\Диплом\Avtoservis\Avtoservis\bin\Debug\ru\EntityFramework.resources.dll
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis.csproj.AssemblyReference.cache
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\CaptchaWindow.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\MainWindow.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\ProfilPage.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\App.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis_Content.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis_MarkupCompile.cache
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis_MarkupCompile.lref
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\App.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\CaptchaWindow.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\MainWindow.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\ProfilPage.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis.g.resources
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis.Properties.Resources.resources
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis.csproj.GenerateResource.cache
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis.csproj.CoreCompileInputs.cache
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis.exe
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis.pdb
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Raboti.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Raboti.baml
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Raboti.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Raboti.baml
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Detali.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Detali.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Detali.baml
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Detali.baml
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Rabochie_mesta.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Rabochie_mesta.baml
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Rabochee_mesto.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Rabochee_mesto.baml
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Marka_avto.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Marki_avto.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Marka_avto.baml
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Marki_avto.baml
+F:\Диплом\Avtoservis\Avtoservis\bin\Debug\Avtoservis.exe.config
+F:\Диплом\Avtoservis\Avtoservis\bin\Debug\Avtoservis.exe
+F:\Диплом\Avtoservis\Avtoservis\bin\Debug\Avtoservis.pdb
+F:\Диплом\Avtoservis\Avtoservis\bin\Debug\EntityFramework.dll
+F:\Диплом\Avtoservis\Avtoservis\bin\Debug\EntityFramework.SqlServer.dll
+F:\Диплом\Avtoservis\Avtoservis\bin\Debug\EntityFramework.xml
+F:\Диплом\Avtoservis\Avtoservis\bin\Debug\EntityFramework.SqlServer.xml
+F:\Диплом\Avtoservis\Avtoservis\bin\Debug\ru\EntityFramework.resources.dll
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis.csproj.AssemblyReference.cache
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Detali.g.cs
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Marka_avto.g.cs
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Rabochee_mesto.g.cs
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Raboti.g.cs
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin.g.cs
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Detali.g.cs
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Marki_avto.g.cs
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Rabochie_mesta.g.cs
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Raboti.g.cs
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\CaptchaWindow.g.cs
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\MainWindow.g.cs
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\ProfilPage.g.cs
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\App.g.cs
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis_Content.g.cs
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis_MarkupCompile.cache
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis_MarkupCompile.lref
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\App.baml
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Detali.baml
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Marka_avto.baml
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Rabochee_mesto.baml
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Raboti.baml
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin.baml
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Detali.baml
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Marki_avto.baml
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Rabochie_mesta.baml
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Raboti.baml
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\CaptchaWindow.baml
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\MainWindow.baml
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\ProfilPage.baml
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis.g.resources
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis.Properties.Resources.resources
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis.csproj.GenerateResource.cache
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis.csproj.CoreCompileInputs.cache
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis.exe
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis.pdb
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Modeli_avto.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Modeli_avto.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Modeli_avto.baml
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Modeli_avto.baml
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Komplektacii_modelei.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Komplektacii_modelei.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Komplektacii_modelei.baml
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Komplektacii_modelei.baml
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Sotrudnik.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Sotrudniki.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Sotrudnik.baml
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Sotrudniki.baml
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Klient.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Klienti.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Klient.baml
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Klienti.baml
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Avtomobil.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Avtomobili.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Avtomobil.baml
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Avtomobili.baml
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Zakaz.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Zakazi.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Zakaz.baml
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Zakazi.baml
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Avtomobil.g.cs
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Klient.g.cs
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Komplektacii_modelei.g.cs
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Modeli_avto.g.cs
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Sotrudnik.g.cs
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Zakaz.g.cs
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Avtomobili.g.cs
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Klienti.g.cs
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Komplektacii_modelei.g.cs
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Modeli_avto.g.cs
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Sotrudniki.g.cs
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Zakazi.g.cs
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Avtomobil.baml
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Klient.baml
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Komplektacii_modelei.baml
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Modeli_avto.baml
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Sotrudnik.baml
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Zakaz.baml
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Avtomobili.baml
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Klienti.baml
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Komplektacii_modelei.baml
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Modeli_avto.baml
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Sotrudniki.baml
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Zakazi.baml
+F:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis.csproj.Up2Date
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\SelectDetailsWindow.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\SelectServicesWindow.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\SelectDetailsWindow.baml
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\SelectServicesWindow.baml
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis.csproj.ResolveComReference.cache
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Akt_vipolnennih_rabot.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Akt_vipolnennih_rabot.baml
+D:\Диплом\Avtoservis\Avtoservis\bin\Debug\Newtonsoft.Json.dll
+D:\Диплом\Avtoservis\Avtoservis\bin\Debug\Newtonsoft.Json.xml
+D:\Диплом\Avtoservis\Avtoservis\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\API.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\API.baml
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Schet_na_oplatu.g.cs
+D:\Диплом\Avtoservis\Avtoservis\obj\Debug\Schet_na_oplatu.baml
+G:\Диплом\Avtoservis\Avtoservis\bin\Debug\Newtonsoft.Json.dll
+G:\Диплом\Avtoservis\Avtoservis\bin\Debug\Newtonsoft.Json.xml
+G:\Диплом\Avtoservis\Avtoservis\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis.csproj.SuggestedBindingRedirects.cache
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis.csproj.ResolveComReference.cache
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Avtomobil.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Defekti.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Detali.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Klient.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Komplektacii_modelei.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Marka_avto.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Modeli_avto.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Rabochee_mesto.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Raboti.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Sotrudnik.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Zakaz.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Avtomobili.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Detali.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Klienti.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Komplektacii_modelei.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Marki_avto.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Modeli_avto.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Rabochie_mesta.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Raboti.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Sotrudniki.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Zakazi.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Akt_vipolnennih_rabot.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\API.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Schet_na_oplatu.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\SelectDetailsWindow.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\SelectServicesWindow.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Avtomobil.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Detali.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Klient.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Komplektacii_modelei.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Marka_avto.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Modeli_avto.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Rabochee_mesto.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Raboti.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Sotrudnik.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Zakaz.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Avtomobili.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Detali.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Klienti.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Komplektacii_modelei.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Marki_avto.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Modeli_avto.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Rabochie_mesta.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Raboti.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Sotrudniki.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Admin_Zakazi.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Akt_vipolnennih_rabot.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\API.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Schet_na_oplatu.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\SelectDetailsWindow.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\SelectServicesWindow.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\AddEdit_Defekti.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Avtoservis.csproj.CopyComplete
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Defektnaya_vedomost.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Defektnaya_vedomost.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Otcheti.g.cs
+G:\Диплом\Avtoservis\Avtoservis\bin\Debug\LiveCharts.dll
+G:\Диплом\Avtoservis\Avtoservis\bin\Debug\LiveCharts.Wpf.dll
+G:\Диплом\Avtoservis\Avtoservis\bin\Debug\LiveCharts.pdb
+G:\Диплом\Avtoservis\Avtoservis\bin\Debug\LiveCharts.xml
+G:\Диплом\Avtoservis\Avtoservis\bin\Debug\LiveCharts.Wpf.pdb
+G:\Диплом\Avtoservis\Avtoservis\bin\Debug\LiveCharts.Wpf.xml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Otcheti.baml
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Sotrudnik.g.cs
+G:\Диплом\Avtoservis\Avtoservis\obj\Debug\Sotrudnik.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\bin\Debug\Avtoservis.exe.config
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\bin\Debug\Avtoservis.exe
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\bin\Debug\Avtoservis.pdb
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\bin\Debug\EntityFramework.dll
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\bin\Debug\EntityFramework.SqlServer.dll
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\bin\Debug\LiveCharts.dll
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\bin\Debug\LiveCharts.Wpf.dll
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\bin\Debug\Newtonsoft.Json.dll
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\bin\Debug\EntityFramework.xml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\bin\Debug\EntityFramework.SqlServer.xml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\bin\Debug\LiveCharts.pdb
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\bin\Debug\LiveCharts.xml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\bin\Debug\LiveCharts.Wpf.pdb
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\bin\Debug\LiveCharts.Wpf.xml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\bin\Debug\Newtonsoft.Json.xml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\bin\Debug\ru\EntityFramework.resources.dll
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Avtoservis.csproj.AssemblyReference.cache
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Avtoservis.csproj.SuggestedBindingRedirects.cache
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Avtoservis.csproj.ResolveComReference.cache
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\AddEdit_Avtomobil.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\AddEdit_Defekti.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\AddEdit_Detali.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\AddEdit_Klient.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\AddEdit_Komplektacii_modelei.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\AddEdit_Marka_avto.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\AddEdit_Modeli_avto.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\AddEdit_Rabochee_mesto.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\AddEdit_Raboti.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\AddEdit_Sotrudnik.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\AddEdit_Zakaz.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Admin.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Admin_Avtomobili.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Admin_Detali.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Admin_Klienti.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Admin_Komplektacii_modelei.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Admin_Marki_avto.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Admin_Modeli_avto.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Admin_Rabochie_mesta.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Admin_Raboti.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Admin_Sotrudniki.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Admin_Zakazi.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Akt_vipolnennih_rabot.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\API.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\CaptchaWindow.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Defektnaya_vedomost.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\MainWindow.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Otcheti.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\ProfilPage.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Schet_na_oplatu.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\SelectDetailsWindow.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\SelectServicesWindow.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Sotrudnik.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\App.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Avtoservis_Content.g.cs
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Avtoservis_MarkupCompile.cache
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Avtoservis_MarkupCompile.lref
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\App.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\AddEdit_Avtomobil.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\AddEdit_Defekti.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\AddEdit_Detali.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\AddEdit_Klient.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\AddEdit_Komplektacii_modelei.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\AddEdit_Marka_avto.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\AddEdit_Modeli_avto.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\AddEdit_Rabochee_mesto.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\AddEdit_Raboti.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\AddEdit_Sotrudnik.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\AddEdit_Zakaz.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Admin.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Admin_Avtomobili.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Admin_Detali.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Admin_Klienti.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Admin_Komplektacii_modelei.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Admin_Marki_avto.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Admin_Modeli_avto.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Admin_Rabochie_mesta.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Admin_Raboti.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Admin_Sotrudniki.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Admin_Zakazi.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Akt_vipolnennih_rabot.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\API.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\CaptchaWindow.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Defektnaya_vedomost.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\MainWindow.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Otcheti.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\ProfilPage.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Schet_na_oplatu.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\SelectDetailsWindow.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\SelectServicesWindow.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Sotrudnik.baml
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Avtoservis.g.resources
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Avtoservis.Properties.Resources.resources
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Avtoservis.csproj.GenerateResource.cache
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Avtoservis.csproj.CoreCompileInputs.cache
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Avtoservis.csproj.CopyComplete
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Avtoservis.exe
+G:\Диплом\Диплом Закатова\Avtoservis\Avtoservis\obj\Debug\Avtoservis.pdb

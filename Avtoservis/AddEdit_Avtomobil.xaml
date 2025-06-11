@@ -1,0 +1,124 @@
+﻿<Window x:Class="Avtoservis.AddEdit_Avtomobil"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Avtoservis"
+        mc:Ignorable="d"
+        Title="Добавление / Редактирование автомобилей клиентов" 
+        Height="650" Width="900" MinHeight="650" MinWidth="900"
+        WindowStartupLocation="CenterScreen" 
+        FontSize="16" FontFamily="Century Gothic">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="#282B38"/>
+
+        <!-- Canvas для выпадающих списков -->
+        <Canvas x:Name="PopupCanvas" Panel.ZIndex="1000"/>
+
+        <TextBlock x:Name="TextBlockZagolovok" Text="Добавление / редактирование" 
+                   FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" 
+                   FontWeight="Bold" Margin="0,25,0,0" Foreground="White"/>
+
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+            <StackPanel HorizontalAlignment="Center" Margin="20" Width="800" VerticalAlignment="Center">
+                <!-- Блок выбора клиента -->
+                <Border BorderBrush="#E0E0E0" BorderThickness="0,0,0,1" Padding="0,0,0,15" Margin="0,0,0,20">
+                    <StackPanel>
+                        <TextBlock Text="Клиент" FontSize="18" FontWeight="SemiBold" Margin="0,0,0,10"/>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Width="200" VerticalAlignment="Center">
+                                <Run Text="Владелец" Foreground="Black"/>
+                                <Run Text="*" Foreground="#FF567BFF"/>
+                            </TextBlock>
+                            <Button x:Name="BtnVladelec" Content="Выберите владельца" 
+                                    Style="{StaticResource GrayComboButtonStyle}" 
+                                    Click="BtnSelect_Click" Width="500" Margin="10,0,0,0" 
+                                    Height="40" FontSize="15"/>
+                        </StackPanel>
+                        <StackPanel x:Name="ClientContactPanel" Orientation="Horizontal" Margin="0,10" Visibility="Collapsed">
+                            <TextBlock Width="200" Text="Контактные данные:" VerticalAlignment="Center"/>
+                            <TextBlock x:Name="ClientContactInfo" Width="500" Margin="10,0,0,0" TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <!-- Блок выбора комплектации -->
+                <Border BorderBrush="#E0E0E0" BorderThickness="0,0,0,1" Padding="0,0,0,15" Margin="0,0,0,20">
+                    <StackPanel>
+                        <TextBlock Text="Комплектация автомобиля" FontSize="18" FontWeight="SemiBold" Margin="0,0,0,10"/>
+
+                        <!-- Выбор марки -->
+                        <StackPanel Orientation="Horizontal" Margin="0,10">
+                            <TextBlock Width="200" VerticalAlignment="Center">
+                                <Run Text="Марка" Foreground="Black"/>
+                                <Run Text="*" Foreground="#FF567BFF"/>
+                            </TextBlock>
+                            <Button x:Name="BtnMarka" Content="Выберите марку" 
+                                    Style="{StaticResource GrayComboButtonStyle}" 
+                                    Click="BtnSelect_Click" Width="500" Margin="10,0,0,0" 
+                                    Height="40" FontSize="15"/>
+                        </StackPanel>
+
+                        <!-- Выбор модели -->
+                        <StackPanel x:Name="ModelPanel" Orientation="Horizontal" Margin="0,10" Visibility="Collapsed">
+                            <TextBlock Width="200" VerticalAlignment="Center">
+                                <Run Text="Модель" Foreground="Black"/>
+                                <Run Text="*" Foreground="#FF567BFF"/>
+                            </TextBlock>
+                            <Button x:Name="BtnModel" Content="Выберите модель" 
+                                    Style="{StaticResource GrayComboButtonStyle}" 
+                                    Click="BtnSelect_Click" Width="500" Margin="10,0,0,0" 
+                                    Height="40" FontSize="15"/>
+                        </StackPanel>
+
+                        <!-- Выбор комплектации -->
+                        <StackPanel x:Name="KomplektaciyaPanel" Orientation="Horizontal" Margin="0,10" Visibility="Collapsed">
+                            <TextBlock Width="200" VerticalAlignment="Center">
+                                <Run Text="Комплектация" Foreground="Black"/>
+                                <Run Text="*" Foreground="#FF567BFF"/>
+                            </TextBlock>
+                            <Button x:Name="BtnKomplektaciya" Content="Выберите комплектацию" 
+                                    Style="{StaticResource GrayComboButtonStyle}" 
+                                    Click="BtnSelect_Click" Width="500" Margin="10,0,0,0" 
+                                    Height="40" FontSize="15"/>
+                        </StackPanel>
+
+                        <!-- Информация о комплектации -->
+                        <StackPanel x:Name="KomplektaciyaInfoPanel" Orientation="Horizontal" Margin="0,10" Visibility="Collapsed">
+                            <TextBlock Width="200" Text="Характеристики:" VerticalAlignment="Center"/>
+                            <TextBlock x:Name="KomplektaciyaInfo" Width="500" Margin="10,0,0,0" TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <!-- Блок данных автомобиля -->
+                <StackPanel>
+                    <TextBlock Text="Данные автомобиля" FontSize="18" FontWeight="SemiBold" Margin="0,0,0,10"/>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,10">
+                        <TextBlock Width="200" VerticalAlignment="Center" Text="VIN-номер"/>
+                        <TextBox x:Name="TextBoxWIN_nomer" Width="500" Height="40" Margin="10,0,0,0" CharacterCasing="Upper"
+                                 Padding="10" FontSize="16" MaxLength="17" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,10">
+                        <TextBlock Width="200" VerticalAlignment="Center">
+                            <Run Text="Гос-номер" Foreground="Black"/>
+                        </TextBlock>
+                        <TextBox x:Name="TextBoxGos_nomer" Width="500" Height="40" Margin="10,0,0,0" CharacterCasing="Upper"
+                                 Padding="10" FontSize="16" MaxLength="15"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <Button Height="45" Width="250" Margin="0,30" Name="BtnSave" 
+                        Click="BtnSave_Click" Content="Сохранить" 
+                        Style="{StaticResource LoginButtonStyle}"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

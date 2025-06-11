@@ -1,0 +1,66 @@
+﻿<Window x:Class="Avtoservis.AddEdit_Rabochee_mesto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Avtoservis"
+        mc:Ignorable="d"
+        Title="Добавление / Редактирование рабочих мест" Height="550" Width="600" MinHeight="550" MinWidth="600" WindowStartupLocation="CenterScreen" FontSize="16" FontFamily="Century Gothic">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="#282B38"></Grid>
+
+        <!-- Canvas для выпадающего списка (добавьте в начало Grid) -->
+        <Canvas x:Name="PopupCanvas" Panel.ZIndex="1000"/>
+
+        <TextBlock x:Name="TextBlockZagolovok" Text="Добавление / редактирование" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" Width="auto" Height="28" TextAlignment="Center" Margin="0,25,0,0" Foreground="White"/>
+
+        <Grid Grid.Row="1" Margin="0,-20,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="auto" Height="auto">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0">
+                <!-- Блок с изображением и кнопкой -->
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,20">
+                    <Border CornerRadius="10"
+                            BorderBrush="#FF567BFF"
+                            BorderThickness="1" 
+                            Height="182"
+                            Width="182"
+                            VerticalAlignment="Top"
+                            Background="White">
+                        <!-- Область обрезки с закруглёнными углами -->
+                        <Grid>
+                            <Grid.Clip>
+                                <RectangleGeometry Rect="0,0,180,180" RadiusX="10" RadiusY="10"/>
+                            </Grid.Clip>
+
+                            <!-- Само изображение -->
+                            <Image x:Name="ImageService" Stretch="UniformToFill" Width="150" Height="150"/>
+
+                            <Border x:Name="ImagePlaceholderBorder" Background="White" Visibility="{Binding ElementName=ImagePlaceholder, Path=Visibility}">
+                                <TextBlock x:Name="ImagePlaceholder" Text="Иконка" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" FontWeight="Bold"/>
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <Button Style="{StaticResource SelectImageButtonStyle}" Width="180"  Margin="0,10,0,0" Name="BtnSelectImage" HorizontalAlignment="Center" VerticalAlignment="Top"
+                            Click="BtnSelectImage_Click"  Content="Выбрать иконку" FontSize="15"/>
+                </StackPanel>
+
+                <!-- Поле ввода названия -->
+                <StackPanel Orientation="Horizontal" Margin="0,5">
+                    <TextBlock Width="110" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Run Text="Название" Foreground="Black"/>
+                        <Run Text="*" Foreground="#FF567BFF"/>
+                    </TextBlock>
+                    <TextBox x:Name="TextBoxNazvanie" Width="300" Height="35" Margin="10,0,0,0" Padding="8,4,0,0" FontSize="16"/>
+                </StackPanel>
+
+                <Button Height="40" Width="250" Margin="0,20,0,0" Name="BtnSave" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="BtnSave_Click" 
+                    Content="Сохранить" Grid.Row="1" Style="{StaticResource LoginButtonStyle}"></Button>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Window>

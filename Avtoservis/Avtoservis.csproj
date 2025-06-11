@@ -1,0 +1,518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6A26A9EC-F064-4F7C-8DAE-A8A9FD45A9C5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Avtoservis</RootNamespace>
+    <AssemblyName>Avtoservis</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ico343.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AddEdit_Defekti.xaml.cs">
+      <DependentUpon>AddEdit_Defekti.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Akt_vipolnennih_rabot.xaml.cs">
+      <DependentUpon>Akt_vipolnennih_rabot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="API.xaml.cs">
+      <DependentUpon>API.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Defektnaya_vedomost.xaml.cs">
+      <DependentUpon>Defektnaya_vedomost.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Otcheti.xaml.cs">
+      <DependentUpon>Otcheti.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RuDateAndMoneyConverter.cs" />
+    <Compile Include="Schet_na_oplatu.xaml.cs">
+      <DependentUpon>Schet_na_oplatu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SelectDetailsWindow.xaml.cs">
+      <DependentUpon>SelectDetailsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SelectServicesWindow.xaml.cs">
+      <DependentUpon>SelectServicesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sotrudnik.xaml.cs">
+      <DependentUpon>Sotrudnik.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AddEdit_Avtomobil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddEdit_Defekti.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddEdit_Detali.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddEdit_Klient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddEdit_Komplektacii_modelei.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddEdit_Marka_avto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddEdit_Modeli_avto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddEdit_Rabochee_mesto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddEdit_Raboti.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddEdit_Sotrudnik.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddEdit_Zakaz.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin_Avtomobili.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin_Detali.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin_Klienti.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin_Komplektacii_modelei.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin_Marki_avto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin_Modeli_avto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin_Rabochie_mesta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin_Raboti.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin_Sotrudniki.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin_Zakazi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Akt_vipolnennih_rabot.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="API.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CaptchaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Defektnaya_vedomost.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="AddEdit_Avtomobil.xaml.cs">
+      <DependentUpon>AddEdit_Avtomobil.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddEdit_Detali.xaml.cs">
+      <DependentUpon>AddEdit_Detali.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddEdit_Klient.xaml.cs">
+      <DependentUpon>AddEdit_Klient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddEdit_Komplektacii_modelei.xaml.cs">
+      <DependentUpon>AddEdit_Komplektacii_modelei.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddEdit_Marka_avto.xaml.cs">
+      <DependentUpon>AddEdit_Marka_avto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddEdit_Modeli_avto.xaml.cs">
+      <DependentUpon>AddEdit_Modeli_avto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddEdit_Rabochee_mesto.xaml.cs">
+      <DependentUpon>AddEdit_Rabochee_mesto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddEdit_Raboti.xaml.cs">
+      <DependentUpon>AddEdit_Raboti.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddEdit_Sotrudnik.xaml.cs">
+      <DependentUpon>AddEdit_Sotrudnik.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddEdit_Zakaz.xaml.cs">
+      <DependentUpon>AddEdit_Zakaz.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.xaml.cs">
+      <DependentUpon>Admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Avtomobili.xaml.cs">
+      <DependentUpon>Admin_Avtomobili.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Detali.xaml.cs">
+      <DependentUpon>Admin_Detali.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Klienti.xaml.cs">
+      <DependentUpon>Admin_Klienti.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Komplektacii_modelei.xaml.cs">
+      <DependentUpon>Admin_Komplektacii_modelei.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Marki_avto.xaml.cs">
+      <DependentUpon>Admin_Marki_avto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Modeli_avto.xaml.cs">
+      <DependentUpon>Admin_Modeli_avto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Rabochie_mesta.xaml.cs">
+      <DependentUpon>Admin_Rabochie_mesta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Raboti.xaml.cs">
+      <DependentUpon>Admin_Raboti.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Sotrudniki.xaml.cs">
+      <DependentUpon>Admin_Sotrudniki.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Zakazi.xaml.cs">
+      <DependentUpon>Admin_Zakazi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CaptchaWindow.xaml.cs">
+      <DependentUpon>CaptchaWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AvtoservicBD.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AvtoservicBD.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AvtoservicBD.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AvtoservicBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AvtoservicBD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AvtoservicBD.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\dm_Avtomobili.cs">
+      <DependentUpon>AvtoservicBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\dm_Defekti.cs">
+      <DependentUpon>AvtoservicBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\dm_Detali.cs">
+      <DependentUpon>AvtoservicBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\dm_Detali_v_zakaze.cs">
+      <DependentUpon>AvtoservicBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\dm_Foto_v_zakaze.cs">
+      <DependentUpon>AvtoservicBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\dm_Gruppi_avto.cs">
+      <DependentUpon>AvtoservicBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\dm_Komplektacii_avto.cs">
+      <DependentUpon>AvtoservicBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\dm_Marki_avto.cs">
+      <DependentUpon>AvtoservicBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\dm_Modeli_avto.cs">
+      <DependentUpon>AvtoservicBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\dm_Proizvoditeli.cs">
+      <DependentUpon>AvtoservicBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\dm_Rabochie_mesta.cs">
+      <DependentUpon>AvtoservicBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\dm_Raboti.cs">
+      <DependentUpon>AvtoservicBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\dm_Raboti_v_zakaze.cs">
+      <DependentUpon>AvtoservicBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\dm_Roli.cs">
+      <DependentUpon>AvtoservicBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\dm_Strani.cs">
+      <DependentUpon>AvtoservicBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\dm_Tipi_detalei.cs">
+      <DependentUpon>AvtoservicBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\dm_Tipi_dvigatelya.cs">
+      <DependentUpon>AvtoservicBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\dm_Tipi_korobki_peredach.cs">
+      <DependentUpon>AvtoservicBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\dm_Tipi_kuzova.cs">
+      <DependentUpon>AvtoservicBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\dm_Tipi_privoda.cs">
+      <DependentUpon>AvtoservicBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\dm_Users.cs">
+      <DependentUpon>AvtoservicBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\dm_Uzli_avto.cs">
+      <DependentUpon>AvtoservicBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\dm_Zakazi.cs">
+      <DependentUpon>AvtoservicBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GridViewColumnWidthConverter.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Otcheti.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProfilPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Schet_na_oplatu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SelectDetailsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SelectServicesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sotrudnik.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ProfilPage.xaml.cs">
+      <DependentUpon>ProfilPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Entities\AvtoservicBD.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AvtoservicBD.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Entities\AvtoservicBD.edmx.diagram">
+      <DependentUpon>AvtoservicBD.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\fon13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Entities\AvtoservicBD.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AvtoservicBD.Context.cs</LastGenOutput>
+      <DependentUpon>AvtoservicBD.edmx</DependentUpon>
+    </Content>
+    <Content Include="Entities\AvtoservicBD.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AvtoservicBD.edmx</DependentUpon>
+      <LastGenOutput>AvtoservicBD.cs</LastGenOutput>
+    </Content>
+    <Resource Include="ico343.ico" />
+    <Resource Include="ikonka432.ico.ico" />
+    <Resource Include="ikonka.ico.ico" />
+    <Resource Include="Images\sprav2.png" />
+    <Resource Include="Images\sprav1.png" />
+    <Resource Include="Images\sprav.png" />
+    <Resource Include="Images\kluch.png" />
+    <Resource Include="Images\doc1.png" />
+    <Resource Include="Images\otcheti3.png" />
+    <Resource Include="Images\otcheti2.png" />
+    <Resource Include="Images\doc.png" />
+    <Resource Include="Images\otcheti.png" />
+    <Resource Include="Images\calendar.png" />
+    <Resource Include="Images\wrench.png" />
+    <Resource Include="Images\free-icon-tools-7050807.png" />
+    <Resource Include="Images\back.png" />
+    <Resource Include="Images\close.png" />
+    <Resource Include="Images\setting.png" />
+    <Resource Include="Images\filter_blue.png" />
+    <Resource Include="Images\icon_edit.png" />
+    <Resource Include="Images\refresh.png" />
+    <Resource Include="Images\spravochniki.png" />
+    <Resource Include="Images\next435.png" />
+    <Resource Include="Images\vihod.png" />
+    <Resource Include="Images\logo2.png" />
+    <Resource Include="Images\icon-reload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

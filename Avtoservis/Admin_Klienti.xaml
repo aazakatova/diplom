@@ -1,0 +1,158 @@
+﻿<Page x:Class="Avtoservis.Admin_Klienti"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Avtoservis"
+      mc:Ignorable="d" 
+      d:DesignHeight="900" d:DesignWidth="1160"
+      Title="Клиенты" FontSize="16" FontFamily="Century Gothic" PreviewMouseDown="Page_PreviewMouseDown" UseLayoutRounding="True" SnapsToDevicePixels="True" Cursor="">
+    <Grid>
+        <!-- Основной белый закругленный блок -->
+        <Border Background="White" 
+                CornerRadius="15" 
+                Margin="50" 
+                Padding="30">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="450"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Заголовок -->
+                <TextBlock Text="Клиенты" 
+                           Grid.ColumnSpan="2"
+                           FontSize="24" 
+                           FontWeight="Bold"
+                           Margin="40,0,0,30"/>
+
+                <!-- Кнопки управления -->
+                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Button x:Name="BtnAdd" Content="Добавить" Style="{StaticResource AddButtonStyle}" Margin="40,0,10,0" Click="BtnAdd_Click"/>
+                    <Button x:Name="BtnDelete" Content="Удалить" Style="{StaticResource DeleteButtonStyle}" Click="BtnDelete_Click"/>
+                    <Button x:Name="BtnRefresh" Style="{StaticResource RoundedButtonStyle}" Width="35" Height="35" Click="BtnRefresh_Click"  Cursor="Hand" BorderBrush="#FFA0A0A0" Background="White" Foreground="#FF042271">
+                        <Image Source="/Images/refresh.png" Stretch="Uniform" Margin="1,0,0,0" Width="19" Height="19"/>
+                    </Button>
+                </StackPanel>
+
+                <!-- Поисковая строка -->
+                <TextBox x:Name="SearchTextBox" Grid.Row="1" Grid.Column="1" Style="{StaticResource SearchTextBoxStyle}" Text="Поиск..." TextChanged="SearchTextBox_TextChanged"  HorizontalAlignment="Right" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
+
+                 <!-- ListView с клиентами -->
+                <ListView x:Name="KlientiList" Grid.Row="2" Margin="40,20,40,20" Grid.ColumnSpan="2" HorizontalContentAlignment="Stretch"
+          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+          Style="{StaticResource WorksListViewStyle}"
+          SelectionMode="Single" PreviewMouseRightButtonDown="KlientiList_PreviewMouseRightButtonDown"
+          AlternationCount="1000">
+                    <ListView.View>
+                        <GridView>
+                            <!-- ID -->
+                            <GridViewColumn Header="ID">
+                                <GridViewColumn.HeaderContainerStyle>
+                                    <Style TargetType="GridViewColumnHeader" BasedOn="{StaticResource SortableHeaderStyle}">
+                                        <EventSetter Event="Click" Handler="ColumnHeader_Click"/>
+                                    </Style>
+                                </GridViewColumn.HeaderContainerStyle>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding ID_user}" 
+                                                   HorizontalAlignment="Center" Foreground="Black"
+                                                   VerticalAlignment="Center"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <!-- Фамилия -->
+                            <GridViewColumn Header="Фамилия">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Familiya}" 
+                                                   HorizontalAlignment="Center" Foreground="Black"
+                                                   VerticalAlignment="Center"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <!-- Имя -->
+                            <GridViewColumn Header="Имя">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Imya}" 
+                                                   HorizontalAlignment="Center" Foreground="Black"
+                                                   VerticalAlignment="Center"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <!-- Отчество -->
+                            <GridViewColumn Header="Отчество">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Otchestvo, TargetNullValue='—'}" 
+                                                   HorizontalAlignment="Center" Foreground="Black"
+                                                   VerticalAlignment="Center"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <!-- Дата рождения -->
+                            <GridViewColumn Header="Дата рождения">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Data_rojdeniya, StringFormat={}{0:dd.MM.yyyy}}" 
+                                                   HorizontalAlignment="Center" Foreground="Black"
+                                                   VerticalAlignment="Center"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <!-- Номер телефона -->
+                            <GridViewColumn Header="Номер телефона">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Nomer_telefona}"
+                                                   Foreground="Black"
+                                                   HorizontalAlignment="Center"
+                                                   VerticalAlignment="Center"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <!-- Кнопка редактирования -->
+                            <GridViewColumn>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button x:Name="BtnEdit" Click="BtnEdit_Click" Cursor="Hand" Width="40" Height="40" HorizontalAlignment="Center" Background="Transparent" BorderBrush="Transparent">
+                                            <Image Source="/Images/icon_edit.png" Stretch="Uniform" Width="35" Height="35"/>
+                                        </Button>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+
+                <!-- Пагинация -->
+                <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,40,10">
+
+                    <TextBlock Text="Показывать:" VerticalAlignment="Center" Margin="0,0,10,0" FontSize="14"/>
+                    <Button x:Name="ItemsPerPageButton" Content="20" Style="{StaticResource ComboBoxStyle}" Click="ItemsPerPageButton_Click"/>
+                    <TextBlock x:Name="PaginationInfo" Text="1-20 из 100" VerticalAlignment="Center" Margin="20,0,20,0" FontSize="14"/>
+
+                    <Button x:Name="BtnPrevPage" Content="Назад" Style="{StaticResource PaginationButtonDisabledStyle}" Margin="0,0,10,0" Click="BtnPrevPage_Click"/>
+                    <Button x:Name="BtnNextPage" Content="Вперед" Style="{StaticResource PaginationButtonDisabledStyle}" Margin="0,0,0,0" Click="BtnNextPage_Click"/>
+                </StackPanel>
+
+
+                <!-- Canvas для выпадающих списков -->
+                <Canvas x:Name="PopupCanvas" Panel.ZIndex="1000" Grid.RowSpan="4" Grid.ColumnSpan="2"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

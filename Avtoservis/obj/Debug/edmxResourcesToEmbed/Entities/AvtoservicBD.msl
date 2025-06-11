@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище user80_dbModelContainer" CdmEntityContainer="user80_dbEntities">
+    <EntitySetMapping Name="dm_Avtomobili">
+      <EntityTypeMapping TypeName="user80_dbModel.dm_Avtomobili">
+        <MappingFragment StoreEntitySet="dm_Avtomobili">
+          <ScalarProperty Name="Gos_nomer" ColumnName="Gos_nomer" />
+          <ScalarProperty Name="Vladelec" ColumnName="Vladelec" />
+          <ScalarProperty Name="WIN_nomer" ColumnName="WIN_nomer" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ID_avtomobilya" ColumnName="ID_avtomobilya" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_Defekti">
+      <EntityTypeMapping TypeName="user80_dbModel.dm_Defekti">
+        <MappingFragment StoreEntitySet="dm_Defekti">
+          <ScalarProperty Name="Zakaz" ColumnName="Zakaz" />
+          <ScalarProperty Name="Primechaniya" ColumnName="Primechaniya" />
+          <ScalarProperty Name="Rekomendacii" ColumnName="Rekomendacii" />
+          <ScalarProperty Name="Opisanie" ColumnName="Opisanie" />
+          <ScalarProperty Name="Uzel_avto" ColumnName="Uzel_avto" />
+          <ScalarProperty Name="ID_defekta" ColumnName="ID_defekta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_Detali">
+      <EntityTypeMapping TypeName="user80_dbModel.dm_Detali">
+        <MappingFragment StoreEntitySet="dm_Detali">
+          <ScalarProperty Name="Opisanie" ColumnName="Opisanie" />
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
+          <ScalarProperty Name="Cena" ColumnName="Cena" />
+          <ScalarProperty Name="Proizvoditel" ColumnName="Proizvoditel" />
+          <ScalarProperty Name="Tip" ColumnName="Tip" />
+          <ScalarProperty Name="Nazvanie" ColumnName="Nazvanie" />
+          <ScalarProperty Name="ID_detali" ColumnName="ID_detali" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_Detali_v_zakaze">
+      <EntityTypeMapping TypeName="user80_dbModel.dm_Detali_v_zakaze">
+        <MappingFragment StoreEntitySet="dm_Detali_v_zakaze">
+          <ScalarProperty Name="Zakrep_cena" ColumnName="Zakrep_cena" />
+          <ScalarProperty Name="Detal_klienta" ColumnName="Detal_klienta" />
+          <ScalarProperty Name="Kolichestvo" ColumnName="Kolichestvo" />
+          <ScalarProperty Name="ID_detali" ColumnName="ID_detali" />
+          <ScalarProperty Name="ID_zakaza" ColumnName="ID_zakaza" />
+          <ScalarProperty Name="ID_detali_v_zakaze" ColumnName="ID_detali_v_zakaze" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_Foto_v_zakaze">
+      <EntityTypeMapping TypeName="user80_dbModel.dm_Foto_v_zakaze">
+        <MappingFragment StoreEntitySet="dm_Foto_v_zakaze">
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
+          <ScalarProperty Name="ID_zakaza" ColumnName="ID_zakaza" />
+          <ScalarProperty Name="ID_foto_v_zakaze" ColumnName="ID_foto_v_zakaze" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_Gruppi_avto">
+      <EntityTypeMapping TypeName="user80_dbModel.dm_Gruppi_avto">
+        <MappingFragment StoreEntitySet="dm_Gruppi_avto">
+          <ScalarProperty Name="Nazvanie_gruppi" ColumnName="Nazvanie_gruppi" />
+          <ScalarProperty Name="ID_gruppi" ColumnName="ID_gruppi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_Komplektacii_avto">
+      <EntityTypeMapping TypeName="user80_dbModel.dm_Komplektacii_avto">
+        <MappingFragment StoreEntitySet="dm_Komplektacii_avto">
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
+          <ScalarProperty Name="Model_avto" ColumnName="Model_avto" />
+          <ScalarProperty Name="Tip_kuzova" ColumnName="Tip_kuzova" />
+          <ScalarProperty Name="Tip_dvigatelya" ColumnName="Tip_dvigatelya" />
+          <ScalarProperty Name="Tip_privoda" ColumnName="Tip_privoda" />
+          <ScalarProperty Name="Tip_korobki_peredach" ColumnName="Tip_korobki_peredach" />
+          <ScalarProperty Name="Moshnost" ColumnName="Moshnost" />
+          <ScalarProperty Name="ID_komplektacii_avto" ColumnName="ID_komplektacii_avto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_Marki_avto">
+      <EntityTypeMapping TypeName="user80_dbModel.dm_Marki_avto">
+        <MappingFragment StoreEntitySet="dm_Marki_avto">
+          <ScalarProperty Name="Logotip" ColumnName="Logotip" />
+          <ScalarProperty Name="Strana_proizvoditel" ColumnName="Strana_proizvoditel" />
+          <ScalarProperty Name="Gruppa" ColumnName="Gruppa" />
+          <ScalarProperty Name="Nazvanie_marki" ColumnName="Nazvanie_marki" />
+          <ScalarProperty Name="ID_marki" ColumnName="ID_marki" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_Modeli_avto">
+      <EntityTypeMapping TypeName="user80_dbModel.dm_Modeli_avto">
+        <MappingFragment StoreEntitySet="dm_Modeli_avto">
+          <ScalarProperty Name="God_okonchaniya_vipuska" ColumnName="God_okonchaniya_vipuska" />
+          <ScalarProperty Name="God_vipuska" ColumnName="God_vipuska" />
+          <ScalarProperty Name="Marka" ColumnName="Marka" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ID_modeli_avto" ColumnName="ID_modeli_avto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_Proizvoditeli">
+      <EntityTypeMapping TypeName="user80_dbModel.dm_Proizvoditeli">
+        <MappingFragment StoreEntitySet="dm_Proizvoditeli">
+          <ScalarProperty Name="Nazvanie_proizvoditelya" ColumnName="Nazvanie_proizvoditelya" />
+          <ScalarProperty Name="ID_proizvoditelya" ColumnName="ID_proizvoditelya" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_Rabochie_mesta">
+      <EntityTypeMapping TypeName="user80_dbModel.dm_Rabochie_mesta">
+        <MappingFragment StoreEntitySet="dm_Rabochie_mesta">
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="Rabochee_mesto" ColumnName="Rabochee_mesto" />
+          <ScalarProperty Name="ID_rabochego_mesta" ColumnName="ID_rabochego_mesta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_Raboti">
+      <EntityTypeMapping TypeName="user80_dbModel.dm_Raboti">
+        <MappingFragment StoreEntitySet="dm_Raboti">
+          <ScalarProperty Name="Dlitelnost" ColumnName="Dlitelnost" />
+          <ScalarProperty Name="Stoimost" ColumnName="Stoimost" />
+          <ScalarProperty Name="Naimenovanie" ColumnName="Naimenovanie" />
+          <ScalarProperty Name="ID_raboti" ColumnName="ID_raboti" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_Raboti_v_zakaze">
+      <EntityTypeMapping TypeName="user80_dbModel.dm_Raboti_v_zakaze">
+        <MappingFragment StoreEntitySet="dm_Raboti_v_zakaze">
+          <ScalarProperty Name="Zakrep_stoimost" ColumnName="Zakrep_stoimost" />
+          <ScalarProperty Name="ID_raboti" ColumnName="ID_raboti" />
+          <ScalarProperty Name="ID_zakaza" ColumnName="ID_zakaza" />
+          <ScalarProperty Name="ID_raboti_v_zakaze" ColumnName="ID_raboti_v_zakaze" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_Roli">
+      <EntityTypeMapping TypeName="user80_dbModel.dm_Roli">
+        <MappingFragment StoreEntitySet="dm_Roli">
+          <ScalarProperty Name="Rol" ColumnName="Rol" />
+          <ScalarProperty Name="ID_roli" ColumnName="ID_roli" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_Strani">
+      <EntityTypeMapping TypeName="user80_dbModel.dm_Strani">
+        <MappingFragment StoreEntitySet="dm_Strani">
+          <ScalarProperty Name="Strana" ColumnName="Strana" />
+          <ScalarProperty Name="ID_strani" ColumnName="ID_strani" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_Tipi_detalei">
+      <EntityTypeMapping TypeName="user80_dbModel.dm_Tipi_detalei">
+        <MappingFragment StoreEntitySet="dm_Tipi_detalei">
+          <ScalarProperty Name="Nazvanie_tipa" ColumnName="Nazvanie_tipa" />
+          <ScalarProperty Name="ID_tipa" ColumnName="ID_tipa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_Tipi_dvigatelya">
+      <EntityTypeMapping TypeName="user80_dbModel.dm_Tipi_dvigatelya">
+        <MappingFragment StoreEntitySet="dm_Tipi_dvigatelya">
+          <ScalarProperty Name="Tip_dvigatelya" ColumnName="Tip_dvigatelya" />
+          <ScalarProperty Name="ID_tipa_dvigatelya" ColumnName="ID_tipa_dvigatelya" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_Tipi_korobki_peredach">
+      <EntityTypeMapping TypeName="user80_dbModel.dm_Tipi_korobki_peredach">
+        <MappingFragment StoreEntitySet="dm_Tipi_korobki_peredach">
+          <ScalarProperty Name="Tip_korobki_peredach" ColumnName="Tip_korobki_peredach" />
+          <ScalarProperty Name="ID_tipa_korobki_peredach" ColumnName="ID_tipa_korobki_peredach" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_Tipi_kuzova">
+      <EntityTypeMapping TypeName="user80_dbModel.dm_Tipi_kuzova">
+        <MappingFragment StoreEntitySet="dm_Tipi_kuzova">
+          <ScalarProperty Name="Tip_kuzova" ColumnName="Tip_kuzova" />
+          <ScalarProperty Name="ID_tipa_kuzova" ColumnName="ID_tipa_kuzova" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_Tipi_privoda">
+      <EntityTypeMapping TypeName="user80_dbModel.dm_Tipi_privoda">
+        <MappingFragment StoreEntitySet="dm_Tipi_privoda">
+          <ScalarProperty Name="Tip_privoda" ColumnName="Tip_privoda" />
+          <ScalarProperty Name="ID_tipa_privoda" ColumnName="ID_tipa_privoda" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_Users">
+      <EntityTypeMapping TypeName="user80_dbModel.dm_Users">
+        <MappingFragment StoreEntitySet="dm_Users">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Nomer_telefona" ColumnName="Nomer_telefona" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
+          <ScalarProperty Name="Rol" ColumnName="Rol" />
+          <ScalarProperty Name="Stazh" ColumnName="Stazh" />
+          <ScalarProperty Name="Data_rojdeniya" ColumnName="Data_rojdeniya" />
+          <ScalarProperty Name="Otchestvo" ColumnName="Otchestvo" />
+          <ScalarProperty Name="Imya" ColumnName="Imya" />
+          <ScalarProperty Name="Familiya" ColumnName="Familiya" />
+          <ScalarProperty Name="ID_user" ColumnName="ID_user" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_Uzli_avto">
+      <EntityTypeMapping TypeName="user80_dbModel.dm_Uzli_avto">
+        <MappingFragment StoreEntitySet="dm_Uzli_avto">
+          <ScalarProperty Name="Nazvanie_uzla_avto" ColumnName="Nazvanie_uzla_avto" />
+          <ScalarProperty Name="ID_uzla_avto" ColumnName="ID_uzla_avto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_Zakazi">
+      <EntityTypeMapping TypeName="user80_dbModel.dm_Zakazi">
+        <MappingFragment StoreEntitySet="dm_Zakazi">
+          <ScalarProperty Name="Data_i_vremya_vidachi_avto" ColumnName="Data_i_vremya_vidachi_avto" />
+          <ScalarProperty Name="Oplata" ColumnName="Oplata" />
+          <ScalarProperty Name="Avtomobil" ColumnName="Avtomobil" />
+          <ScalarProperty Name="Rabochee_mesto" ColumnName="Rabochee_mesto" />
+          <ScalarProperty Name="Data_i_vremya_priema_avto" ColumnName="Data_i_vremya_priema_avto" />
+          <ScalarProperty Name="Ispolnitel" ColumnName="Ispolnitel" />
+          <ScalarProperty Name="Klient" ColumnName="Klient" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Data_sozdaniya" ColumnName="Data_sozdaniya" />
+          <ScalarProperty Name="ID_zakaza" ColumnName="ID_zakaza" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

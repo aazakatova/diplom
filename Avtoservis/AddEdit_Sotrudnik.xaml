@@ -1,0 +1,135 @@
+﻿<Window x:Class="Avtoservis.AddEdit_Sotrudnik"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Avtoservis"
+        mc:Ignorable="d"
+        Title="Добавление / Редактирование сотрудников" Height="800" Width="920" MinHeight="800" MinWidth="920" WindowStartupLocation="CenterScreen" FontSize="16" FontFamily="Century Gothic">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="#282B38"></Grid>
+
+        <!-- Canvas для выпадающего списка (добавьте в начало Grid) -->
+        <Canvas x:Name="PopupCanvas" Panel.ZIndex="1000"/>
+
+        <TextBlock x:Name="TextBlockZagolovok" Text="Добавление / редактирование" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" Width="auto" Height="28" TextAlignment="Center" Margin="0,25,0,0" Foreground="White"/>
+
+        <Grid Grid.Row="1" Margin="0,-20,0,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="520"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Левый столбец - поля ввода -->
+            <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0">
+                <StackPanel Orientation="Horizontal" Margin="0,10">
+                    <TextBlock Width="160" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Run Text="Фамилия" Foreground="Black"/>
+                        <Run Text="*" Foreground="#FF567BFF"/>
+                    </TextBlock>
+                    <TextBox x:Name="TextBoxFamiliya" Width="300" Height="35" Margin="10,0,0,0" Padding="8,4,0,0" FontSize="16"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10">
+                    <TextBlock Width="160" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Run Text="Имя" Foreground="Black"/>
+                        <Run Text="*" Foreground="#FF567BFF"/>
+                    </TextBlock>
+                    <TextBox x:Name="TextBoxImya" Width="300" Height="35" Margin="10,0,0,0" Padding="8,4,0,0" FontSize="16"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10">
+                    <TextBlock Width="160" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Run Text="Отчество" Foreground="Black"/>
+                    </TextBlock>
+                    <TextBox x:Name="TextBoxOtchestvo" Width="300" Height="35" Margin="10,0,0,0" Padding="8,4,0,0" FontSize="16"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10">
+                    <TextBlock Width="160" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Run Text="Дата рождения" Foreground="Black"/>
+                        <Run Text="*" Foreground="#FF567BFF"/>
+                    </TextBlock>
+                    <Button x:Name="BtnData_rojdeniya" Content="Выберите дату рождения" Style="{StaticResource GrayComboButtonStyle}" Click="BtnData_rojdeniya_Click"  Width="300" Margin="10,0,0,0" Height="33" FontSize="15"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10">
+                    <TextBlock Width="160" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Run Text="Статус" Foreground="Black"/>
+                        <Run Text="*" Foreground="#FF567BFF"/>
+                    </TextBlock>
+                    <Button x:Name="BtnStatus" Content="Выберите статус" Style="{StaticResource GrayComboButtonStyle}" Click="BtnStatus_Click" Width="300" Margin="10,0,0,0" Height="33" FontSize="15"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10">
+                    <TextBlock Width="160" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Run Text="Номер телефона" Foreground="Black"/>
+                    </TextBlock>
+                    <TextBox x:Name="TextBoxNomer_telefona" Width="300" Height="35" Margin="10,0,0,0" Padding="8,4,0,0" FontSize="16"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10">
+                    <TextBlock Width="160" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Run Text="Логин" Foreground="Black"/>
+                        <Run Text="*" Foreground="#FF567BFF"/>
+                    </TextBlock>
+                    <TextBox x:Name="TextBoxLogin" Width="300" Height="35" Margin="10,0,0,0" Padding="8,4,0,0" FontSize="16"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10">
+                    <TextBlock Width="160" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Run Text="Пароль" Foreground="Black"/>
+                        <Run Text="*" Foreground="#FF567BFF"/>
+                    </TextBlock>
+                    <TextBox x:Name="TextBoxPassword" Width="300" Height="35" Margin="10,0,0,0" Padding="8,4,0,0" FontSize="16"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10">
+                    <TextBlock Width="160" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Run Text="Стаж, год/лет" Foreground="Black"/>
+                    </TextBlock>
+                    <TextBox x:Name="TextBoxStazh" Width="300" Height="35" Margin="10,0,0,0" Padding="8,4,0,0" FontSize="16"/>
+                </StackPanel>
+
+            </StackPanel>
+
+            <!-- Правый столбец - изображение и кнопка -->
+            <StackPanel Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0">
+                <Border CornerRadius="10"
+            BorderBrush="#FF567BFF"
+            BorderThickness="1" 
+            Height="222"
+            Width="232"
+            VerticalAlignment="Top"
+            Background="White">
+                    <!-- Область обрезки с закруглёнными углами -->
+                    <Grid>
+                        <Grid.Clip>
+                            <RectangleGeometry Rect="0,0,230,220" RadiusX="10" RadiusY="10"/>
+                        </Grid.Clip>
+
+                        <!-- Само изображение -->
+                        <Image x:Name="ImageSotrudnik" Stretch="UniformToFill" Width="230" Height="220"/>
+
+
+
+                        <Border x:Name="ImagePlaceholderBorder" Background="White" Visibility="{Binding ElementName=ImagePlaceholder, Path=Visibility}">
+                            <TextBlock x:Name="ImagePlaceholder" Text="Фото сотрудника" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" FontWeight="Bold"/>
+                        </Border>
+                    </Grid>
+                </Border>
+                <Button Style="{StaticResource SelectImageButtonStyle}" Margin="0,10,0,0" Name="BtnSelectImage" HorizontalAlignment="Center" VerticalAlignment="Top"
+                        Click="BtnSelectImage_Click"  Content="Выбрать фотографию" FontSize="15"/>
+            </StackPanel>
+
+            <!-- Вторая строка: кнопка Сохранить, объединенная через две колонки -->
+            <Button Grid.Row="1" Grid.ColumnSpan="2" 
+                    Height="40" Width="250" Margin="0,30,0,0" 
+                    Name="BtnSave" HorizontalAlignment="Center" 
+                    Click="BtnSave_Click"  Content="Сохранить" 
+                    Style="{StaticResource LoginButtonStyle}"/>
+        </Grid>
+
+    </Grid>
+</Window>

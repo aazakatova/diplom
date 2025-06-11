@@ -1,0 +1,673 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="user80_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="user80_dbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="dm_Avtomobili" EntityType="user80_dbModel.dm_Avtomobili" />
+    <EntitySet Name="dm_Defekti" EntityType="user80_dbModel.dm_Defekti" />
+    <EntitySet Name="dm_Detali" EntityType="user80_dbModel.dm_Detali" />
+    <EntitySet Name="dm_Detali_v_zakaze" EntityType="user80_dbModel.dm_Detali_v_zakaze" />
+    <EntitySet Name="dm_Foto_v_zakaze" EntityType="user80_dbModel.dm_Foto_v_zakaze" />
+    <EntitySet Name="dm_Gruppi_avto" EntityType="user80_dbModel.dm_Gruppi_avto" />
+    <EntitySet Name="dm_Komplektacii_avto" EntityType="user80_dbModel.dm_Komplektacii_avto" />
+    <EntitySet Name="dm_Marki_avto" EntityType="user80_dbModel.dm_Marki_avto" />
+    <EntitySet Name="dm_Modeli_avto" EntityType="user80_dbModel.dm_Modeli_avto" />
+    <EntitySet Name="dm_Proizvoditeli" EntityType="user80_dbModel.dm_Proizvoditeli" />
+    <EntitySet Name="dm_Rabochie_mesta" EntityType="user80_dbModel.dm_Rabochie_mesta" />
+    <EntitySet Name="dm_Raboti" EntityType="user80_dbModel.dm_Raboti" />
+    <EntitySet Name="dm_Raboti_v_zakaze" EntityType="user80_dbModel.dm_Raboti_v_zakaze" />
+    <EntitySet Name="dm_Roli" EntityType="user80_dbModel.dm_Roli" />
+    <EntitySet Name="dm_Strani" EntityType="user80_dbModel.dm_Strani" />
+    <EntitySet Name="dm_Tipi_detalei" EntityType="user80_dbModel.dm_Tipi_detalei" />
+    <EntitySet Name="dm_Tipi_dvigatelya" EntityType="user80_dbModel.dm_Tipi_dvigatelya" />
+    <EntitySet Name="dm_Tipi_korobki_peredach" EntityType="user80_dbModel.dm_Tipi_korobki_peredach" />
+    <EntitySet Name="dm_Tipi_kuzova" EntityType="user80_dbModel.dm_Tipi_kuzova" />
+    <EntitySet Name="dm_Tipi_privoda" EntityType="user80_dbModel.dm_Tipi_privoda" />
+    <EntitySet Name="dm_Users" EntityType="user80_dbModel.dm_Users" />
+    <EntitySet Name="dm_Uzli_avto" EntityType="user80_dbModel.dm_Uzli_avto" />
+    <EntitySet Name="dm_Zakazi" EntityType="user80_dbModel.dm_Zakazi" />
+    <AssociationSet Name="FK_dm_Avtomobili_dm_Komplektacii_avto" Association="user80_dbModel.FK_dm_Avtomobili_dm_Komplektacii_avto">
+      <End Role="dm_Komplektacii_avto" EntitySet="dm_Komplektacii_avto" />
+      <End Role="dm_Avtomobili" EntitySet="dm_Avtomobili" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dm_Avtomobili_dm_Users" Association="user80_dbModel.FK_dm_Avtomobili_dm_Users">
+      <End Role="dm_Users" EntitySet="dm_Users" />
+      <End Role="dm_Avtomobili" EntitySet="dm_Avtomobili" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dm_Zakazi_dm_Avtomobili" Association="user80_dbModel.FK_dm_Zakazi_dm_Avtomobili">
+      <End Role="dm_Avtomobili" EntitySet="dm_Avtomobili" />
+      <End Role="dm_Zakazi" EntitySet="dm_Zakazi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dm_Defekti_dm_Uzli_avto" Association="user80_dbModel.FK_dm_Defekti_dm_Uzli_avto">
+      <End Role="dm_Uzli_avto" EntitySet="dm_Uzli_avto" />
+      <End Role="dm_Defekti" EntitySet="dm_Defekti" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dm_Defekti_dm_Zakazi" Association="user80_dbModel.FK_dm_Defekti_dm_Zakazi">
+      <End Role="dm_Zakazi" EntitySet="dm_Zakazi" />
+      <End Role="dm_Defekti" EntitySet="dm_Defekti" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dm_Detali_dm_Proizvoditeli" Association="user80_dbModel.FK_dm_Detali_dm_Proizvoditeli">
+      <End Role="dm_Proizvoditeli" EntitySet="dm_Proizvoditeli" />
+      <End Role="dm_Detali" EntitySet="dm_Detali" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dm_Detali_dm_Tipi_detalei" Association="user80_dbModel.FK_dm_Detali_dm_Tipi_detalei">
+      <End Role="dm_Tipi_detalei" EntitySet="dm_Tipi_detalei" />
+      <End Role="dm_Detali" EntitySet="dm_Detali" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dm_Detali_v_zakaze_dm_Detali" Association="user80_dbModel.FK_dm_Detali_v_zakaze_dm_Detali">
+      <End Role="dm_Detali" EntitySet="dm_Detali" />
+      <End Role="dm_Detali_v_zakaze" EntitySet="dm_Detali_v_zakaze" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dm_Detali_v_zakaze_dm_Zakazi" Association="user80_dbModel.FK_dm_Detali_v_zakaze_dm_Zakazi">
+      <End Role="dm_Zakazi" EntitySet="dm_Zakazi" />
+      <End Role="dm_Detali_v_zakaze" EntitySet="dm_Detali_v_zakaze" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dm_Foto_v_zakaze_dm_Zakazi" Association="user80_dbModel.FK_dm_Foto_v_zakaze_dm_Zakazi">
+      <End Role="dm_Zakazi" EntitySet="dm_Zakazi" />
+      <End Role="dm_Foto_v_zakaze" EntitySet="dm_Foto_v_zakaze" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dm_Marki_avto_dm_Gruppi_avto" Association="user80_dbModel.FK_dm_Marki_avto_dm_Gruppi_avto">
+      <End Role="dm_Gruppi_avto" EntitySet="dm_Gruppi_avto" />
+      <End Role="dm_Marki_avto" EntitySet="dm_Marki_avto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dm_Komplektacii_avto_dm_Modeli_avto" Association="user80_dbModel.FK_dm_Komplektacii_avto_dm_Modeli_avto">
+      <End Role="dm_Modeli_avto" EntitySet="dm_Modeli_avto" />
+      <End Role="dm_Komplektacii_avto" EntitySet="dm_Komplektacii_avto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dm_Komplektacii_avto_dm_Tipi_dvigatelya" Association="user80_dbModel.FK_dm_Komplektacii_avto_dm_Tipi_dvigatelya">
+      <End Role="dm_Tipi_dvigatelya" EntitySet="dm_Tipi_dvigatelya" />
+      <End Role="dm_Komplektacii_avto" EntitySet="dm_Komplektacii_avto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dm_Komplektacii_avto_dm_Tipi_korobki_peredach" Association="user80_dbModel.FK_dm_Komplektacii_avto_dm_Tipi_korobki_peredach">
+      <End Role="dm_Tipi_korobki_peredach" EntitySet="dm_Tipi_korobki_peredach" />
+      <End Role="dm_Komplektacii_avto" EntitySet="dm_Komplektacii_avto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dm_Komplektacii_avto_dm_Tipi_kuzova" Association="user80_dbModel.FK_dm_Komplektacii_avto_dm_Tipi_kuzova">
+      <End Role="dm_Tipi_kuzova" EntitySet="dm_Tipi_kuzova" />
+      <End Role="dm_Komplektacii_avto" EntitySet="dm_Komplektacii_avto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dm_Komplektacii_avto_dm_Tipi_privoda" Association="user80_dbModel.FK_dm_Komplektacii_avto_dm_Tipi_privoda">
+      <End Role="dm_Tipi_privoda" EntitySet="dm_Tipi_privoda" />
+      <End Role="dm_Komplektacii_avto" EntitySet="dm_Komplektacii_avto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dm_Marki_avto_dm_Strani" Association="user80_dbModel.FK_dm_Marki_avto_dm_Strani">
+      <End Role="dm_Strani" EntitySet="dm_Strani" />
+      <End Role="dm_Marki_avto" EntitySet="dm_Marki_avto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dm_Modeli_avto_dm_Marki_avto" Association="user80_dbModel.FK_dm_Modeli_avto_dm_Marki_avto">
+      <End Role="dm_Marki_avto" EntitySet="dm_Marki_avto" />
+      <End Role="dm_Modeli_avto" EntitySet="dm_Modeli_avto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dm_Zakazi_dm_Rabochie_mesta" Association="user80_dbModel.FK_dm_Zakazi_dm_Rabochie_mesta">
+      <End Role="dm_Rabochie_mesta" EntitySet="dm_Rabochie_mesta" />
+      <End Role="dm_Zakazi" EntitySet="dm_Zakazi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dm_Raboti_v_zakaze_dm_Raboti" Association="user80_dbModel.FK_dm_Raboti_v_zakaze_dm_Raboti">
+      <End Role="dm_Raboti" EntitySet="dm_Raboti" />
+      <End Role="dm_Raboti_v_zakaze" EntitySet="dm_Raboti_v_zakaze" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dm_Raboti_v_zakaze_dm_Zakazi" Association="user80_dbModel.FK_dm_Raboti_v_zakaze_dm_Zakazi">
+      <End Role="dm_Zakazi" EntitySet="dm_Zakazi" />
+      <End Role="dm_Raboti_v_zakaze" EntitySet="dm_Raboti_v_zakaze" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dm_Users_dm_Roli" Association="user80_dbModel.FK_dm_Users_dm_Roli">
+      <End Role="dm_Roli" EntitySet="dm_Roli" />
+      <End Role="dm_Users" EntitySet="dm_Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dm_Zakazi_dm_Users1" Association="user80_dbModel.FK_dm_Zakazi_dm_Users1">
+      <End Role="dm_Users" EntitySet="dm_Users" />
+      <End Role="dm_Zakazi" EntitySet="dm_Zakazi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dm_Zakazi_dm_Users2" Association="user80_dbModel.FK_dm_Zakazi_dm_Users2">
+      <End Role="dm_Users" EntitySet="dm_Users" />
+      <End Role="dm_Zakazi" EntitySet="dm_Zakazi" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="dm_Avtomobili">
+    <Key>
+      <PropertyRef Name="ID_avtomobilya" />
+    </Key>
+    <Property Name="ID_avtomobilya" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Model" Type="Int32" Nullable="false" />
+    <Property Name="WIN_nomer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Vladelec" Type="Int32" Nullable="false" />
+    <Property Name="Gos_nomer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="dm_Komplektacii_avto" Relationship="user80_dbModel.FK_dm_Avtomobili_dm_Komplektacii_avto" FromRole="dm_Avtomobili" ToRole="dm_Komplektacii_avto" />
+    <NavigationProperty Name="dm_Users" Relationship="user80_dbModel.FK_dm_Avtomobili_dm_Users" FromRole="dm_Avtomobili" ToRole="dm_Users" />
+    <NavigationProperty Name="dm_Zakazi" Relationship="user80_dbModel.FK_dm_Zakazi_dm_Avtomobili" FromRole="dm_Avtomobili" ToRole="dm_Zakazi" />
+  </EntityType>
+  <EntityType Name="dm_Defekti">
+    <Key>
+      <PropertyRef Name="ID_defekta" />
+    </Key>
+    <Property Name="ID_defekta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Uzel_avto" Type="Int32" />
+    <Property Name="Opisanie" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Rekomendacii" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Primechaniya" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Zakaz" Type="Int32" />
+    <NavigationProperty Name="dm_Uzli_avto" Relationship="user80_dbModel.FK_dm_Defekti_dm_Uzli_avto" FromRole="dm_Defekti" ToRole="dm_Uzli_avto" />
+    <NavigationProperty Name="dm_Zakazi" Relationship="user80_dbModel.FK_dm_Defekti_dm_Zakazi" FromRole="dm_Defekti" ToRole="dm_Zakazi" />
+  </EntityType>
+  <EntityType Name="dm_Detali">
+    <Key>
+      <PropertyRef Name="ID_detali" />
+    </Key>
+    <Property Name="ID_detali" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nazvanie" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Tip" Type="Int32" Nullable="false" />
+    <Property Name="Proizvoditel" Type="Int32" Nullable="false" />
+    <Property Name="Cena" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="Foto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Opisanie" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="dm_Proizvoditeli" Relationship="user80_dbModel.FK_dm_Detali_dm_Proizvoditeli" FromRole="dm_Detali" ToRole="dm_Proizvoditeli" />
+    <NavigationProperty Name="dm_Tipi_detalei" Relationship="user80_dbModel.FK_dm_Detali_dm_Tipi_detalei" FromRole="dm_Detali" ToRole="dm_Tipi_detalei" />
+    <NavigationProperty Name="dm_Detali_v_zakaze" Relationship="user80_dbModel.FK_dm_Detali_v_zakaze_dm_Detali" FromRole="dm_Detali" ToRole="dm_Detali_v_zakaze" />
+  </EntityType>
+  <EntityType Name="dm_Detali_v_zakaze">
+    <Key>
+      <PropertyRef Name="ID_detali_v_zakaze" />
+    </Key>
+    <Property Name="ID_detali_v_zakaze" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_zakaza" Type="Int32" Nullable="false" />
+    <Property Name="ID_detali" Type="Int32" Nullable="false" />
+    <Property Name="Kolichestvo" Type="Int32" Nullable="false" />
+    <Property Name="Detal_klienta" Type="Boolean" Nullable="false" />
+    <Property Name="Zakrep_cena" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="dm_Detali" Relationship="user80_dbModel.FK_dm_Detali_v_zakaze_dm_Detali" FromRole="dm_Detali_v_zakaze" ToRole="dm_Detali" />
+    <NavigationProperty Name="dm_Zakazi" Relationship="user80_dbModel.FK_dm_Detali_v_zakaze_dm_Zakazi" FromRole="dm_Detali_v_zakaze" ToRole="dm_Zakazi" />
+  </EntityType>
+  <EntityType Name="dm_Foto_v_zakaze">
+    <Key>
+      <PropertyRef Name="ID_foto_v_zakaze" />
+    </Key>
+    <Property Name="ID_foto_v_zakaze" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_zakaza" Type="Int32" Nullable="false" />
+    <Property Name="Foto" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="dm_Zakazi" Relationship="user80_dbModel.FK_dm_Foto_v_zakaze_dm_Zakazi" FromRole="dm_Foto_v_zakaze" ToRole="dm_Zakazi" />
+  </EntityType>
+  <EntityType Name="dm_Gruppi_avto">
+    <Key>
+      <PropertyRef Name="ID_gruppi" />
+    </Key>
+    <Property Name="ID_gruppi" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nazvanie_gruppi" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="dm_Marki_avto" Relationship="user80_dbModel.FK_dm_Marki_avto_dm_Gruppi_avto" FromRole="dm_Gruppi_avto" ToRole="dm_Marki_avto" />
+  </EntityType>
+  <EntityType Name="dm_Komplektacii_avto">
+    <Key>
+      <PropertyRef Name="ID_komplektacii_avto" />
+    </Key>
+    <Property Name="ID_komplektacii_avto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Moshnost" Type="Int32" Nullable="false" />
+    <Property Name="Tip_korobki_peredach" Type="Int32" Nullable="false" />
+    <Property Name="Tip_privoda" Type="Int32" Nullable="false" />
+    <Property Name="Tip_dvigatelya" Type="Int32" Nullable="false" />
+    <Property Name="Tip_kuzova" Type="Int32" Nullable="false" />
+    <Property Name="Model_avto" Type="Int32" Nullable="false" />
+    <Property Name="Foto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="dm_Avtomobili" Relationship="user80_dbModel.FK_dm_Avtomobili_dm_Komplektacii_avto" FromRole="dm_Komplektacii_avto" ToRole="dm_Avtomobili" />
+    <NavigationProperty Name="dm_Modeli_avto" Relationship="user80_dbModel.FK_dm_Komplektacii_avto_dm_Modeli_avto" FromRole="dm_Komplektacii_avto" ToRole="dm_Modeli_avto" />
+    <NavigationProperty Name="dm_Tipi_dvigatelya" Relationship="user80_dbModel.FK_dm_Komplektacii_avto_dm_Tipi_dvigatelya" FromRole="dm_Komplektacii_avto" ToRole="dm_Tipi_dvigatelya" />
+    <NavigationProperty Name="dm_Tipi_korobki_peredach" Relationship="user80_dbModel.FK_dm_Komplektacii_avto_dm_Tipi_korobki_peredach" FromRole="dm_Komplektacii_avto" ToRole="dm_Tipi_korobki_peredach" />
+    <NavigationProperty Name="dm_Tipi_kuzova" Relationship="user80_dbModel.FK_dm_Komplektacii_avto_dm_Tipi_kuzova" FromRole="dm_Komplektacii_avto" ToRole="dm_Tipi_kuzova" />
+    <NavigationProperty Name="dm_Tipi_privoda" Relationship="user80_dbModel.FK_dm_Komplektacii_avto_dm_Tipi_privoda" FromRole="dm_Komplektacii_avto" ToRole="dm_Tipi_privoda" />
+  </EntityType>
+  <EntityType Name="dm_Marki_avto">
+    <Key>
+      <PropertyRef Name="ID_marki" />
+    </Key>
+    <Property Name="ID_marki" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nazvanie_marki" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Gruppa" Type="Int32" Nullable="false" />
+    <Property Name="Strana_proizvoditel" Type="Int32" Nullable="false" />
+    <Property Name="Logotip" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="dm_Gruppi_avto" Relationship="user80_dbModel.FK_dm_Marki_avto_dm_Gruppi_avto" FromRole="dm_Marki_avto" ToRole="dm_Gruppi_avto" />
+    <NavigationProperty Name="dm_Strani" Relationship="user80_dbModel.FK_dm_Marki_avto_dm_Strani" FromRole="dm_Marki_avto" ToRole="dm_Strani" />
+    <NavigationProperty Name="dm_Modeli_avto" Relationship="user80_dbModel.FK_dm_Modeli_avto_dm_Marki_avto" FromRole="dm_Marki_avto" ToRole="dm_Modeli_avto" />
+  </EntityType>
+  <EntityType Name="dm_Modeli_avto">
+    <Key>
+      <PropertyRef Name="ID_modeli_avto" />
+    </Key>
+    <Property Name="ID_modeli_avto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Model" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Marka" Type="Int32" Nullable="false" />
+    <Property Name="God_vipuska" Type="Int32" Nullable="false" />
+    <Property Name="God_okonchaniya_vipuska" Type="Int32" />
+    <NavigationProperty Name="dm_Komplektacii_avto" Relationship="user80_dbModel.FK_dm_Komplektacii_avto_dm_Modeli_avto" FromRole="dm_Modeli_avto" ToRole="dm_Komplektacii_avto" />
+    <NavigationProperty Name="dm_Marki_avto" Relationship="user80_dbModel.FK_dm_Modeli_avto_dm_Marki_avto" FromRole="dm_Modeli_avto" ToRole="dm_Marki_avto" />
+  </EntityType>
+  <EntityType Name="dm_Proizvoditeli">
+    <Key>
+      <PropertyRef Name="ID_proizvoditelya" />
+    </Key>
+    <Property Name="ID_proizvoditelya" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nazvanie_proizvoditelya" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="dm_Detali" Relationship="user80_dbModel.FK_dm_Detali_dm_Proizvoditeli" FromRole="dm_Proizvoditeli" ToRole="dm_Detali" />
+  </EntityType>
+  <EntityType Name="dm_Rabochie_mesta">
+    <Key>
+      <PropertyRef Name="ID_rabochego_mesta" />
+    </Key>
+    <Property Name="ID_rabochego_mesta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Rabochee_mesto" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Icon" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="dm_Zakazi" Relationship="user80_dbModel.FK_dm_Zakazi_dm_Rabochie_mesta" FromRole="dm_Rabochie_mesta" ToRole="dm_Zakazi" />
+  </EntityType>
+  <EntityType Name="dm_Raboti">
+    <Key>
+      <PropertyRef Name="ID_raboti" />
+    </Key>
+    <Property Name="ID_raboti" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Naimenovanie" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Stoimost" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="Dlitelnost" Type="Int32" />
+    <NavigationProperty Name="dm_Raboti_v_zakaze" Relationship="user80_dbModel.FK_dm_Raboti_v_zakaze_dm_Raboti" FromRole="dm_Raboti" ToRole="dm_Raboti_v_zakaze" />
+  </EntityType>
+  <EntityType Name="dm_Raboti_v_zakaze">
+    <Key>
+      <PropertyRef Name="ID_raboti_v_zakaze" />
+    </Key>
+    <Property Name="ID_raboti_v_zakaze" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_zakaza" Type="Int32" Nullable="false" />
+    <Property Name="ID_raboti" Type="Int32" Nullable="false" />
+    <Property Name="Zakrep_stoimost" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="dm_Raboti" Relationship="user80_dbModel.FK_dm_Raboti_v_zakaze_dm_Raboti" FromRole="dm_Raboti_v_zakaze" ToRole="dm_Raboti" />
+    <NavigationProperty Name="dm_Zakazi" Relationship="user80_dbModel.FK_dm_Raboti_v_zakaze_dm_Zakazi" FromRole="dm_Raboti_v_zakaze" ToRole="dm_Zakazi" />
+  </EntityType>
+  <EntityType Name="dm_Roli">
+    <Key>
+      <PropertyRef Name="ID_roli" />
+    </Key>
+    <Property Name="ID_roli" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Rol" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="dm_Users" Relationship="user80_dbModel.FK_dm_Users_dm_Roli" FromRole="dm_Roli" ToRole="dm_Users" />
+  </EntityType>
+  <EntityType Name="dm_Strani">
+    <Key>
+      <PropertyRef Name="ID_strani" />
+    </Key>
+    <Property Name="ID_strani" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Strana" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="dm_Marki_avto" Relationship="user80_dbModel.FK_dm_Marki_avto_dm_Strani" FromRole="dm_Strani" ToRole="dm_Marki_avto" />
+  </EntityType>
+  <EntityType Name="dm_Tipi_detalei">
+    <Key>
+      <PropertyRef Name="ID_tipa" />
+    </Key>
+    <Property Name="ID_tipa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nazvanie_tipa" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="dm_Detali" Relationship="user80_dbModel.FK_dm_Detali_dm_Tipi_detalei" FromRole="dm_Tipi_detalei" ToRole="dm_Detali" />
+  </EntityType>
+  <EntityType Name="dm_Tipi_dvigatelya">
+    <Key>
+      <PropertyRef Name="ID_tipa_dvigatelya" />
+    </Key>
+    <Property Name="ID_tipa_dvigatelya" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tip_dvigatelya" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="dm_Komplektacii_avto" Relationship="user80_dbModel.FK_dm_Komplektacii_avto_dm_Tipi_dvigatelya" FromRole="dm_Tipi_dvigatelya" ToRole="dm_Komplektacii_avto" />
+  </EntityType>
+  <EntityType Name="dm_Tipi_korobki_peredach">
+    <Key>
+      <PropertyRef Name="ID_tipa_korobki_peredach" />
+    </Key>
+    <Property Name="ID_tipa_korobki_peredach" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tip_korobki_peredach" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="dm_Komplektacii_avto" Relationship="user80_dbModel.FK_dm_Komplektacii_avto_dm_Tipi_korobki_peredach" FromRole="dm_Tipi_korobki_peredach" ToRole="dm_Komplektacii_avto" />
+  </EntityType>
+  <EntityType Name="dm_Tipi_kuzova">
+    <Key>
+      <PropertyRef Name="ID_tipa_kuzova" />
+    </Key>
+    <Property Name="ID_tipa_kuzova" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tip_kuzova" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="dm_Komplektacii_avto" Relationship="user80_dbModel.FK_dm_Komplektacii_avto_dm_Tipi_kuzova" FromRole="dm_Tipi_kuzova" ToRole="dm_Komplektacii_avto" />
+  </EntityType>
+  <EntityType Name="dm_Tipi_privoda">
+    <Key>
+      <PropertyRef Name="ID_tipa_privoda" />
+    </Key>
+    <Property Name="ID_tipa_privoda" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tip_privoda" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="dm_Komplektacii_avto" Relationship="user80_dbModel.FK_dm_Komplektacii_avto_dm_Tipi_privoda" FromRole="dm_Tipi_privoda" ToRole="dm_Komplektacii_avto" />
+  </EntityType>
+  <EntityType Name="dm_Users">
+    <Key>
+      <PropertyRef Name="ID_user" />
+    </Key>
+    <Property Name="ID_user" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Familiya" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Imya" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Otchestvo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Data_rojdeniya" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Stazh" Type="Int32" />
+    <Property Name="Rol" Type="Int32" Nullable="false" />
+    <Property Name="Foto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Login" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Nomer_telefona" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="dm_Avtomobili" Relationship="user80_dbModel.FK_dm_Avtomobili_dm_Users" FromRole="dm_Users" ToRole="dm_Avtomobili" />
+    <NavigationProperty Name="dm_Roli" Relationship="user80_dbModel.FK_dm_Users_dm_Roli" FromRole="dm_Users" ToRole="dm_Roli" />
+    <NavigationProperty Name="dm_Zakazi" Relationship="user80_dbModel.FK_dm_Zakazi_dm_Users1" FromRole="dm_Users" ToRole="dm_Zakazi" />
+    <NavigationProperty Name="dm_Zakazi1" Relationship="user80_dbModel.FK_dm_Zakazi_dm_Users2" FromRole="dm_Users" ToRole="dm_Zakazi" />
+  </EntityType>
+  <EntityType Name="dm_Uzli_avto">
+    <Key>
+      <PropertyRef Name="ID_uzla_avto" />
+    </Key>
+    <Property Name="ID_uzla_avto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nazvanie_uzla_avto" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="dm_Defekti" Relationship="user80_dbModel.FK_dm_Defekti_dm_Uzli_avto" FromRole="dm_Uzli_avto" ToRole="dm_Defekti" />
+  </EntityType>
+  <EntityType Name="dm_Zakazi">
+    <Key>
+      <PropertyRef Name="ID_zakaza" />
+    </Key>
+    <Property Name="ID_zakaza" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Data_sozdaniya" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Klient" Type="Int32" Nullable="false" />
+    <Property Name="Ispolnitel" Type="Int32" />
+    <Property Name="Data_i_vremya_priema_avto" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="Rabochee_mesto" Type="Int32" Nullable="false" />
+    <Property Name="Avtomobil" Type="Int32" />
+    <Property Name="Oplata" Type="Boolean" Nullable="false" />
+    <Property Name="Data_i_vremya_vidachi_avto" Type="DateTime" Nullable="false" Precision="7" />
+    <NavigationProperty Name="dm_Avtomobili" Relationship="user80_dbModel.FK_dm_Zakazi_dm_Avtomobili" FromRole="dm_Zakazi" ToRole="dm_Avtomobili" />
+    <NavigationProperty Name="dm_Defekti" Relationship="user80_dbModel.FK_dm_Defekti_dm_Zakazi" FromRole="dm_Zakazi" ToRole="dm_Defekti" />
+    <NavigationProperty Name="dm_Detali_v_zakaze" Relationship="user80_dbModel.FK_dm_Detali_v_zakaze_dm_Zakazi" FromRole="dm_Zakazi" ToRole="dm_Detali_v_zakaze" />
+    <NavigationProperty Name="dm_Foto_v_zakaze" Relationship="user80_dbModel.FK_dm_Foto_v_zakaze_dm_Zakazi" FromRole="dm_Zakazi" ToRole="dm_Foto_v_zakaze" />
+    <NavigationProperty Name="dm_Rabochie_mesta" Relationship="user80_dbModel.FK_dm_Zakazi_dm_Rabochie_mesta" FromRole="dm_Zakazi" ToRole="dm_Rabochie_mesta" />
+    <NavigationProperty Name="dm_Raboti_v_zakaze" Relationship="user80_dbModel.FK_dm_Raboti_v_zakaze_dm_Zakazi" FromRole="dm_Zakazi" ToRole="dm_Raboti_v_zakaze" />
+    <NavigationProperty Name="dm_Users" Relationship="user80_dbModel.FK_dm_Zakazi_dm_Users1" FromRole="dm_Zakazi" ToRole="dm_Users" />
+    <NavigationProperty Name="dm_Users1" Relationship="user80_dbModel.FK_dm_Zakazi_dm_Users2" FromRole="dm_Zakazi" ToRole="dm_Users" />
+  </EntityType>
+  <Association Name="FK_dm_Avtomobili_dm_Komplektacii_avto">
+    <End Type="user80_dbModel.dm_Komplektacii_avto" Role="dm_Komplektacii_avto" Multiplicity="1" />
+    <End Type="user80_dbModel.dm_Avtomobili" Role="dm_Avtomobili" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_Komplektacii_avto">
+        <PropertyRef Name="ID_komplektacii_avto" />
+      </Principal>
+      <Dependent Role="dm_Avtomobili">
+        <PropertyRef Name="Model" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dm_Avtomobili_dm_Users">
+    <End Type="user80_dbModel.dm_Users" Role="dm_Users" Multiplicity="1" />
+    <End Type="user80_dbModel.dm_Avtomobili" Role="dm_Avtomobili" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_Users">
+        <PropertyRef Name="ID_user" />
+      </Principal>
+      <Dependent Role="dm_Avtomobili">
+        <PropertyRef Name="Vladelec" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dm_Zakazi_dm_Avtomobili">
+    <End Type="user80_dbModel.dm_Avtomobili" Role="dm_Avtomobili" Multiplicity="0..1" />
+    <End Type="user80_dbModel.dm_Zakazi" Role="dm_Zakazi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_Avtomobili">
+        <PropertyRef Name="ID_avtomobilya" />
+      </Principal>
+      <Dependent Role="dm_Zakazi">
+        <PropertyRef Name="Avtomobil" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dm_Defekti_dm_Uzli_avto">
+    <End Type="user80_dbModel.dm_Uzli_avto" Role="dm_Uzli_avto" Multiplicity="0..1" />
+    <End Type="user80_dbModel.dm_Defekti" Role="dm_Defekti" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_Uzli_avto">
+        <PropertyRef Name="ID_uzla_avto" />
+      </Principal>
+      <Dependent Role="dm_Defekti">
+        <PropertyRef Name="Uzel_avto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dm_Defekti_dm_Zakazi">
+    <End Type="user80_dbModel.dm_Zakazi" Role="dm_Zakazi" Multiplicity="0..1" />
+    <End Type="user80_dbModel.dm_Defekti" Role="dm_Defekti" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_Zakazi">
+        <PropertyRef Name="ID_zakaza" />
+      </Principal>
+      <Dependent Role="dm_Defekti">
+        <PropertyRef Name="Zakaz" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dm_Detali_dm_Proizvoditeli">
+    <End Type="user80_dbModel.dm_Proizvoditeli" Role="dm_Proizvoditeli" Multiplicity="1" />
+    <End Type="user80_dbModel.dm_Detali" Role="dm_Detali" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_Proizvoditeli">
+        <PropertyRef Name="ID_proizvoditelya" />
+      </Principal>
+      <Dependent Role="dm_Detali">
+        <PropertyRef Name="Proizvoditel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dm_Detali_dm_Tipi_detalei">
+    <End Type="user80_dbModel.dm_Tipi_detalei" Role="dm_Tipi_detalei" Multiplicity="1" />
+    <End Type="user80_dbModel.dm_Detali" Role="dm_Detali" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_Tipi_detalei">
+        <PropertyRef Name="ID_tipa" />
+      </Principal>
+      <Dependent Role="dm_Detali">
+        <PropertyRef Name="Tip" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dm_Detali_v_zakaze_dm_Detali">
+    <End Type="user80_dbModel.dm_Detali" Role="dm_Detali" Multiplicity="1" />
+    <End Type="user80_dbModel.dm_Detali_v_zakaze" Role="dm_Detali_v_zakaze" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_Detali">
+        <PropertyRef Name="ID_detali" />
+      </Principal>
+      <Dependent Role="dm_Detali_v_zakaze">
+        <PropertyRef Name="ID_detali" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dm_Detali_v_zakaze_dm_Zakazi">
+    <End Type="user80_dbModel.dm_Zakazi" Role="dm_Zakazi" Multiplicity="1" />
+    <End Type="user80_dbModel.dm_Detali_v_zakaze" Role="dm_Detali_v_zakaze" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_Zakazi">
+        <PropertyRef Name="ID_zakaza" />
+      </Principal>
+      <Dependent Role="dm_Detali_v_zakaze">
+        <PropertyRef Name="ID_zakaza" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dm_Foto_v_zakaze_dm_Zakazi">
+    <End Type="user80_dbModel.dm_Zakazi" Role="dm_Zakazi" Multiplicity="1" />
+    <End Type="user80_dbModel.dm_Foto_v_zakaze" Role="dm_Foto_v_zakaze" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_Zakazi">
+        <PropertyRef Name="ID_zakaza" />
+      </Principal>
+      <Dependent Role="dm_Foto_v_zakaze">
+        <PropertyRef Name="ID_zakaza" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dm_Marki_avto_dm_Gruppi_avto">
+    <End Type="user80_dbModel.dm_Gruppi_avto" Role="dm_Gruppi_avto" Multiplicity="1" />
+    <End Type="user80_dbModel.dm_Marki_avto" Role="dm_Marki_avto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_Gruppi_avto">
+        <PropertyRef Name="ID_gruppi" />
+      </Principal>
+      <Dependent Role="dm_Marki_avto">
+        <PropertyRef Name="Gruppa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dm_Komplektacii_avto_dm_Modeli_avto">
+    <End Type="user80_dbModel.dm_Modeli_avto" Role="dm_Modeli_avto" Multiplicity="1" />
+    <End Type="user80_dbModel.dm_Komplektacii_avto" Role="dm_Komplektacii_avto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_Modeli_avto">
+        <PropertyRef Name="ID_modeli_avto" />
+      </Principal>
+      <Dependent Role="dm_Komplektacii_avto">
+        <PropertyRef Name="Model_avto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dm_Komplektacii_avto_dm_Tipi_dvigatelya">
+    <End Type="user80_dbModel.dm_Tipi_dvigatelya" Role="dm_Tipi_dvigatelya" Multiplicity="1" />
+    <End Type="user80_dbModel.dm_Komplektacii_avto" Role="dm_Komplektacii_avto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_Tipi_dvigatelya">
+        <PropertyRef Name="ID_tipa_dvigatelya" />
+      </Principal>
+      <Dependent Role="dm_Komplektacii_avto">
+        <PropertyRef Name="Tip_dvigatelya" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dm_Komplektacii_avto_dm_Tipi_korobki_peredach">
+    <End Type="user80_dbModel.dm_Tipi_korobki_peredach" Role="dm_Tipi_korobki_peredach" Multiplicity="1" />
+    <End Type="user80_dbModel.dm_Komplektacii_avto" Role="dm_Komplektacii_avto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_Tipi_korobki_peredach">
+        <PropertyRef Name="ID_tipa_korobki_peredach" />
+      </Principal>
+      <Dependent Role="dm_Komplektacii_avto">
+        <PropertyRef Name="Tip_korobki_peredach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dm_Komplektacii_avto_dm_Tipi_kuzova">
+    <End Type="user80_dbModel.dm_Tipi_kuzova" Role="dm_Tipi_kuzova" Multiplicity="1" />
+    <End Type="user80_dbModel.dm_Komplektacii_avto" Role="dm_Komplektacii_avto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_Tipi_kuzova">
+        <PropertyRef Name="ID_tipa_kuzova" />
+      </Principal>
+      <Dependent Role="dm_Komplektacii_avto">
+        <PropertyRef Name="Tip_kuzova" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dm_Komplektacii_avto_dm_Tipi_privoda">
+    <End Type="user80_dbModel.dm_Tipi_privoda" Role="dm_Tipi_privoda" Multiplicity="1" />
+    <End Type="user80_dbModel.dm_Komplektacii_avto" Role="dm_Komplektacii_avto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_Tipi_privoda">
+        <PropertyRef Name="ID_tipa_privoda" />
+      </Principal>
+      <Dependent Role="dm_Komplektacii_avto">
+        <PropertyRef Name="Tip_privoda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dm_Marki_avto_dm_Strani">
+    <End Type="user80_dbModel.dm_Strani" Role="dm_Strani" Multiplicity="1" />
+    <End Type="user80_dbModel.dm_Marki_avto" Role="dm_Marki_avto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_Strani">
+        <PropertyRef Name="ID_strani" />
+      </Principal>
+      <Dependent Role="dm_Marki_avto">
+        <PropertyRef Name="Strana_proizvoditel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dm_Modeli_avto_dm_Marki_avto">
+    <End Type="user80_dbModel.dm_Marki_avto" Role="dm_Marki_avto" Multiplicity="1" />
+    <End Type="user80_dbModel.dm_Modeli_avto" Role="dm_Modeli_avto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_Marki_avto">
+        <PropertyRef Name="ID_marki" />
+      </Principal>
+      <Dependent Role="dm_Modeli_avto">
+        <PropertyRef Name="Marka" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dm_Zakazi_dm_Rabochie_mesta">
+    <End Type="user80_dbModel.dm_Rabochie_mesta" Role="dm_Rabochie_mesta" Multiplicity="1" />
+    <End Type="user80_dbModel.dm_Zakazi" Role="dm_Zakazi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_Rabochie_mesta">
+        <PropertyRef Name="ID_rabochego_mesta" />
+      </Principal>
+      <Dependent Role="dm_Zakazi">
+        <PropertyRef Name="Rabochee_mesto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dm_Raboti_v_zakaze_dm_Raboti">
+    <End Type="user80_dbModel.dm_Raboti" Role="dm_Raboti" Multiplicity="1" />
+    <End Type="user80_dbModel.dm_Raboti_v_zakaze" Role="dm_Raboti_v_zakaze" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_Raboti">
+        <PropertyRef Name="ID_raboti" />
+      </Principal>
+      <Dependent Role="dm_Raboti_v_zakaze">
+        <PropertyRef Name="ID_raboti" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dm_Raboti_v_zakaze_dm_Zakazi">
+    <End Type="user80_dbModel.dm_Zakazi" Role="dm_Zakazi" Multiplicity="1" />
+    <End Type="user80_dbModel.dm_Raboti_v_zakaze" Role="dm_Raboti_v_zakaze" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_Zakazi">
+        <PropertyRef Name="ID_zakaza" />
+      </Principal>
+      <Dependent Role="dm_Raboti_v_zakaze">
+        <PropertyRef Name="ID_zakaza" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dm_Users_dm_Roli">
+    <End Type="user80_dbModel.dm_Roli" Role="dm_Roli" Multiplicity="1" />
+    <End Type="user80_dbModel.dm_Users" Role="dm_Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_Roli">
+        <PropertyRef Name="ID_roli" />
+      </Principal>
+      <Dependent Role="dm_Users">
+        <PropertyRef Name="Rol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dm_Zakazi_dm_Users1">
+    <End Type="user80_dbModel.dm_Users" Role="dm_Users" Multiplicity="0..1" />
+    <End Type="user80_dbModel.dm_Zakazi" Role="dm_Zakazi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_Users">
+        <PropertyRef Name="ID_user" />
+      </Principal>
+      <Dependent Role="dm_Zakazi">
+        <PropertyRef Name="Ispolnitel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dm_Zakazi_dm_Users2">
+    <End Type="user80_dbModel.dm_Users" Role="dm_Users" Multiplicity="1" />
+    <End Type="user80_dbModel.dm_Zakazi" Role="dm_Zakazi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_Users">
+        <PropertyRef Name="ID_user" />
+      </Principal>
+      <Dependent Role="dm_Zakazi">
+        <PropertyRef Name="Klient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

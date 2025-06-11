@@ -1,0 +1,285 @@
+﻿<Page x:Class="Avtoservis.Otcheti"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Avtoservis"
+      xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+      mc:Ignorable="d"
+      d:DesignHeight="900" d:DesignWidth="1160"
+      Title="Отчёты" FontSize="16" FontFamily="Century Gothic" PreviewMouseDown="Window_PreviewMouseDown"
+      UseLayoutRounding="True" SnapsToDevicePixels="True">
+    <Grid>
+        <!-- Основной белый закругленный блок -->
+        <Border Background="White"
+                CornerRadius="15"
+                Margin="50"
+                Padding="30">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <!-- Заголовок -->
+                <TextBlock Text="Отчёты"
+                           FontSize="24"
+                           FontWeight="Bold"
+                           Margin="40,0,0,30"/>
+
+                <!-- Выбор периода -->
+                <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="40,0,0,20">
+                    <TextBlock Text="Период:" VerticalAlignment="Center" Margin="0,0,10,2"/>
+                    <Button x:Name="BtnDateFrom" Content="Выберите дату" 
+                            Style="{StaticResource GrayComboButtonStyle}"
+                            Click="BtnDateFrom_Click" Width="160" Margin="0,0,10,0" 
+                            Height="35" FontSize="15"/>
+                    <TextBlock Text="по" VerticalAlignment="Center" Margin="0,0,10,2"/>
+                    <Button x:Name="BtnDateTo" Content="Выберите дату" 
+                            Style="{StaticResource GrayComboButtonStyle}" 
+                            Click="BtnDateTo_Click" Width="160" Margin="0,0,20,0" 
+                            Height="35" FontSize="15"/>
+                    <Button x:Name="BtnRefresh" Content="Обновить" Width="140" Height="35" Click="BtnRefresh_Click" Style="{StaticResource AddButtonStyle}"/>
+                </StackPanel>
+
+                <!-- Табы с отчетами -->
+                <TabControl Grid.Row="2">
+                    <TabItem Header="Статистика по заказам">
+                        <ScrollViewer>
+                            <StackPanel Margin="0,0,0,20">
+                                <!-- 1.1 Распределение заказов по статусам -->
+                                <Border BorderBrush="#E0E0E0" BorderThickness="0,0,0,1" Padding="0,0,0,15" Margin="0,0,0,20">
+                                    <StackPanel>
+                                        <TextBlock Text="Распределение заказов по статусам" FontSize="18" FontWeight="SemiBold" Margin="30,20,0,10"/>
+                                        <lvc:PieChart x:Name="OrdersByStatusChart" LegendLocation="Right" Height="300">
+                                            <lvc:PieChart.ChartLegend>
+                                                <lvc:DefaultLegend Margin="0 0 100 0"/>
+                                                <!-- Отступ справа 20px -->
+                                            </lvc:PieChart.ChartLegend>
+                                        </lvc:PieChart>
+                                    </StackPanel>
+                                </Border>
+
+                                <!-- 1.2 Количество заказов по месяцам -->
+                                <Border BorderBrush="#E0E0E0" BorderThickness="0,0,0,1" Padding="0,0,0,15" Margin="0,0,0,20">
+                                    <StackPanel>
+                                        <TextBlock Text="Количество заказов по месяцам" FontSize="18" FontWeight="SemiBold" Margin="30,0,0,10"/>
+                                        <lvc:CartesianChart x:Name="OrdersByMonthChart" LegendLocation="None" Height="300">
+                                            <lvc:CartesianChart.AxisX>
+                                                <lvc:Axis Title="Год–Месяц" />
+                                                <!-- Метки задаются в коде -->
+                                            </lvc:CartesianChart.AxisX>
+                                            <lvc:CartesianChart.AxisY>
+                                                <lvc:Axis Title="Количество"/>
+                                            </lvc:CartesianChart.AxisY>
+                                        </lvc:CartesianChart>
+                                    </StackPanel>
+                                </Border>
+
+                                <!-- 1.3 Динамика доходов -->
+                                <Border BorderBrush="#E0E0E0" BorderThickness="0,0,0,1" Padding="0,0,0,15" Margin="0,0,0,20">
+                                    <StackPanel>
+                                        <TextBlock Text="Динамика доходов" FontSize="18" FontWeight="SemiBold" Margin="30,0,0,10"/>
+                                        <lvc:CartesianChart x:Name="IncomeChart" LegendLocation="Top" Height="300">
+                                            <lvc:CartesianChart.AxisX>
+                                                <lvc:Axis Title="Год–Месяц" />
+                                                <!-- Метки задаются в коде -->
+                                            </lvc:CartesianChart.AxisX>
+                                            <lvc:CartesianChart.AxisY>
+                                                <lvc:Axis Title="Сумма (руб)"/>
+                                            </lvc:CartesianChart.AxisY>
+                                        </lvc:CartesianChart>
+                                    </StackPanel>
+                                </Border>
+                            </StackPanel>
+                        </ScrollViewer>
+                    </TabItem>
+
+                    <TabItem Header="Анализ автомобилей">
+                        <ScrollViewer>
+                            <StackPanel Margin="0,0,0,20">
+                                <!-- 2.1 Распределение автомобилей по маркам -->
+                                <Border BorderBrush="#E0E0E0" BorderThickness="0,0,0,1" Padding="0,0,0,15" Margin="0,0,0,20">
+                                    <StackPanel>
+                                        <TextBlock Text="Распределение автомобилей по маркам" FontSize="18" FontWeight="SemiBold" Margin="30,20,0,10"/>
+                                        <lvc:PieChart x:Name="CarsByBrandChart" LegendLocation="Right" Height="300">
+                                            <lvc:PieChart.ChartLegend>
+                                                <lvc:DefaultLegend Margin="0 0 100 0"/>
+                                                <!-- Отступ справа 20px -->
+                                            </lvc:PieChart.ChartLegend>
+                                        </lvc:PieChart>
+                                    </StackPanel>
+                                </Border>
+
+                                <!-- 2.2 Количество автомобилей по годам выпуска -->
+                                <Border BorderBrush="#E0E0E0" BorderThickness="0,0,0,1" Padding="0,0,0,15" Margin="0,0,0,20">
+                                    <StackPanel>
+                                        <TextBlock Text="Количество автомобилей по годам выпуска" FontSize="18" FontWeight="SemiBold" Margin="30,0,0,10"/>
+                                        <lvc:CartesianChart x:Name="CarsByYearChart" LegendLocation="None" Height="300">
+                                            <lvc:CartesianChart.AxisX>
+                                                <lvc:Axis Title="Год" />
+                                                <!-- Метки задаются в коде -->
+                                            </lvc:CartesianChart.AxisX>
+                                            <lvc:CartesianChart.AxisY>
+                                                <lvc:Axis Title="Количество"/>
+                                            </lvc:CartesianChart.AxisY>
+                                        </lvc:CartesianChart>
+                                    </StackPanel>
+                                </Border>
+                            </StackPanel>
+                        </ScrollViewer>
+                    </TabItem>
+
+                    <TabItem Header="Работы и детали">
+                        <ScrollViewer>
+                            <StackPanel Margin="0,0,0,20">
+                                <!-- 3. Топ-10 самых частых работ -->
+                                <Border BorderBrush="#E0E0E0" BorderThickness="0,0,0,1" Padding="0,0,0,15" Margin="0,0,0,20">
+                                    <StackPanel>
+                                        <TextBlock Text="Топ-10 самых частых работ" FontSize="18" FontWeight="SemiBold" Margin="30,20,0,10"/>
+                                        <lvc:CartesianChart x:Name="TopServicesChart" LegendLocation="None" Height="400">
+                                            <lvc:CartesianChart.AxisX>
+                                                <lvc:Axis Title="Услуга" />
+                                                <!-- Метки задаются в коде -->
+                                            </lvc:CartesianChart.AxisX>
+                                            <lvc:CartesianChart.AxisY>
+                                                <lvc:Axis Title="Количество"/>
+                                            </lvc:CartesianChart.AxisY>
+                                        </lvc:CartesianChart>
+                                    </StackPanel>
+                                </Border>
+                            </StackPanel>
+                        </ScrollViewer>
+                    </TabItem>
+
+                    <TabItem Header="Клиенты и сотрудники">
+                        <ScrollViewer>
+                            <StackPanel Margin="0,0,0,20">
+                                <!-- 4.1 Распределение клиентов по возрасту -->
+                                <Border BorderBrush="#E0E0E0" BorderThickness="0,0,0,1" Padding="0,0,0,15" Margin="0,0,0,20">
+                                    <StackPanel>
+                                        <TextBlock Text="Распределение клиентов по возрасту" FontSize="18" FontWeight="SemiBold" Margin="30,20,0,10"/>
+                                        <lvc:CartesianChart x:Name="ClientsByAgeChart" LegendLocation="None" Height="300">
+                                            <lvc:CartesianChart.AxisX>
+                                                <lvc:Axis Title="Возрастная группа" />
+                                                <!-- Метки задаются в коде -->
+                                            </lvc:CartesianChart.AxisX>
+                                            <lvc:CartesianChart.AxisY>
+                                                <lvc:Axis Title="Количество"/>
+                                            </lvc:CartesianChart.AxisY>
+                                        </lvc:CartesianChart>
+                                    </StackPanel>
+                                </Border>
+
+                                <!-- 4.2 Статистика выполнения заказов по сотрудникам -->
+                                <Border BorderBrush="#E0E0E0" BorderThickness="0,0,0,1" Padding="0,0,0,15" Margin="0,0,0,20">
+                                    <StackPanel>
+                                        <TextBlock Text="Статистика выполнения заказов по сотрудникам" FontSize="18" FontWeight="SemiBold" Margin="30,0,0,10"/>
+                                        <lvc:CartesianChart x:Name="OrdersByEmployeeChart" LegendLocation="None" Height="400">
+                                            <lvc:CartesianChart.AxisX>
+                                                <lvc:Axis Title="Сотрудник" />
+                                                <!-- Метки задаются в коде -->
+                                            </lvc:CartesianChart.AxisX>
+                                            <lvc:CartesianChart.AxisY>
+                                                <lvc:Axis Title="Количество заказов"/>
+                                            </lvc:CartesianChart.AxisY>
+                                        </lvc:CartesianChart>
+                                    </StackPanel>
+                                </Border>
+                            </StackPanel>
+                        </ScrollViewer>
+                    </TabItem>
+
+                    <TabItem Header="Дефекты и узлы">
+                        <ScrollViewer>
+                            <StackPanel Margin="0,0,0,20">
+                                <!-- 5. Топ-5 самых частых дефектов -->
+                                <Border BorderBrush="#E0E0E0" BorderThickness="0,0,0,1" Padding="0,0,0,15" Margin="0,0,0,20">
+                                    <StackPanel>
+                                        <TextBlock Text="Топ-5 самых частых дефектов" FontSize="18" FontWeight="SemiBold" Margin="30,20,0,10"/>
+                                        <lvc:CartesianChart x:Name="TopDefectsChart" LegendLocation="None" Height="300">
+                                            <lvc:CartesianChart.AxisX>
+                                                <lvc:Axis Title="Узел / Деталь" />
+                                                <!-- Метки задаются в коде -->
+                                            </lvc:CartesianChart.AxisX>
+                                            <lvc:CartesianChart.AxisY>
+                                                <lvc:Axis Title="Количество"/>
+                                            </lvc:CartesianChart.AxisY>
+                                        </lvc:CartesianChart>
+                                    </StackPanel>
+                                </Border>
+                            </StackPanel>
+                        </ScrollViewer>
+                    </TabItem>
+
+                    <TabItem Header="Финансовая отчётность">
+                        <ScrollViewer>
+                            <StackPanel Margin="0,0,0,20">
+
+                                <!-- 6.1 Отчёт за последний календарный месяц -->
+                                <Border BorderBrush="#E0E0E0" BorderThickness="0,0,0,1" Padding="0,0,0,15" Margin="0,0,0,20">
+                                    <StackPanel>
+                                        <TextBlock Text="Финансовая отчётность (последний месяц)" 
+                               FontSize="18" FontWeight="SemiBold" Margin="30,20,0,10"/>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <!-- Доходы за последний месяц -->
+                                            <Border Grid.Column="0" BorderBrush="#E0E0E0" BorderThickness="0,0,1,0" Padding="0,0,15,0">
+                                                <StackPanel>
+                                                    <TextBlock Text="Доходы (работы и детали)" FontSize="16" FontWeight="SemiBold" Margin="30,0,0,10"/>
+                                                    <lvc:PieChart x:Name="IncomeSourcesChart" LegendLocation="Bottom" Height="250"/>
+                                                    <TextBlock x:Name="TotalIncomeText" Text="Общий доход: 0 ₽" 
+                                           FontSize="14" FontWeight="Bold" Margin="30,10,0,0"/>
+                                                </StackPanel>
+                                            </Border>
+
+                                            <!-- Расходы за последний месяц -->
+                                            <Border Grid.Column="1" Padding="15,0,0,0">
+                                                <StackPanel>
+                                                    <TextBlock Text="Расходы (себестоимость деталей)" FontSize="16" FontWeight="SemiBold" Margin="0,0,0,10"/>
+                                                    <lvc:PieChart x:Name="ExpensesChart" LegendLocation="Bottom" Height="250"/>
+                                                    <TextBlock x:Name="TotalExpensesText" Text="Общие расходы: 0 ₽" 
+                                           FontSize="14" FontWeight="Bold" Margin="0,10,0,0"/>
+                                                </StackPanel>
+                                            </Border>
+                                        </Grid>
+
+                                        <TextBlock x:Name="ProfitText" Text="Прибыль: 0 ₽" 
+                               FontSize="16" FontWeight="Bold" Foreground="Green" Margin="30,10,0,0"/>
+                                    </StackPanel>
+                                </Border>
+
+                                <!-- 6.2 Отчёт за текущий год -->
+                                <Border BorderBrush="#E0E0E0" BorderThickness="0,0,0,1" Padding="0,0,0,15" Margin="0,0,0,20">
+                                    <StackPanel>
+                                        <TextBlock Text="Финансовая отчётность (текущий год)" 
+                               FontSize="18" FontWeight="SemiBold" Margin="30,0,0,10"/>
+                                        <lvc:CartesianChart x:Name="YearlyFinanceChart" LegendLocation="Top" Height="300">
+                                            <lvc:CartesianChart.AxisX>
+                                                <lvc:Axis Title="Месяцы" 
+                                      LabelsRotation="45" />
+                                            </lvc:CartesianChart.AxisX>
+                                            <lvc:CartesianChart.AxisY>
+                                                <lvc:Axis Title="Сумма (₽)"/>
+                                            </lvc:CartesianChart.AxisY>
+                                        </lvc:CartesianChart>
+                                    </StackPanel>
+                                </Border>
+
+                            </StackPanel>
+                        </ScrollViewer>
+                    </TabItem>
+                </TabControl>
+            </Grid>
+        </Border>
+
+        <!-- Canvas для выпадающих списков -->
+        <Canvas x:Name="PopupCanvas" Panel.ZIndex="1000"/>
+    </Grid>
+</Page>
